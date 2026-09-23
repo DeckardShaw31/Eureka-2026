@@ -16,49 +16,53 @@
       "THA",
       "VNM"
     ],
-    "partner_countries_count": 25,
+    "partner_countries_count": 24,
     "country_panel_obs_estimation": 135,
-    "bilateral_panel_valid_obs_estimation": 3216,
-    "bilateral_zero_trade_obs": 144,
-    "bilateral_pairs_count": 216,
-    "vietnam_2024_unreported_status": "Xử lý thành NaN (Không điền giả mạo số 0, tránh làm sai lệch mô hình trọng lực)"
+    "bilateral_panel_valid_obs_estimation": 3082,
+    "bilateral_zero_trade_obs": 142,
+    "bilateral_pairs_count": 207,
+    "vietnam_2024_unreported_status": "Xử lý thành NaN (Không điền giả mạo số 0, bảo lưu mẫu ước lượng thực tế)"
   },
   "hypotheses_evaluation": {
     "H1_LSCI_Export": {
       "statement": "LSCI cao hơn có quan hệ dương và có ý nghĩa thống kê với giá trị xuất khẩu hàng hóa",
-      "status": "CONFIRMED (Chấp nhận)",
+      "status": "SUPPORTED AS ROBUST POSITIVE ASSOCIATION (NOT CAUSAL)",
       "ppml_coef": 1.1924506722023729,
       "p_value": 0.014028223996442615,
-      "interpretation": "Chỉ số kết nối vận tải biển LSCI có mối quan hệ đồng biến và có ý nghĩa thống kê cao với giá trị xuất khẩu (hệ số PPML M1 = 1.192, p = 0.014; mô hình kiểm soát M2 = 1.039, p = 0.006). Tăng 1% LSCI gắn liền với mức tăng xuất khẩu khoảng 1.04% khi đã kiểm soát quy mô kinh tế và dân số."
+      "interpretation": "Chỉ số kết nối vận tải biển LSCI có mối quan hệ đồng biến và có ý nghĩa thống kê cao với giá trị xuất khẩu (hệ số PPML M1 = 1.192**, p = 0.014; mô hình kiểm soát M2 = 1.039***, p = 0.006). Tăng 1% LSCI gắn liền với mức tăng xuất khẩu khoảng 1.04% khi đã kiểm soát quy mô kinh tế và dân số. Do biến dẫn trước (lead) có ý nghĩa và đặc tính chuỗi thời gian vĩ mô có quán tính cao, kết quả được diễn giải chuẩn xác như một mối quan hệ đồng biến bền vững (robust association) thay vì suy diễn nhân quả thuần túy."
     },
     "H2_LSBCI_Bilateral": {
       "statement": "LSBCI song phương cao hơn có quan hệ dương với xuất khẩu song phương",
-      "status": "PARTIALLY SUPPORTED (Ủng hộ có điều kiện)",
+      "status": "NOT SUPPORTED IN PREFERRED SPECIFICATION (POSITIVE ONLY IN G2)",
       "g1_structural_coef": -0.19528155776673062,
       "g1_structural_pval": 0.4215357739177009,
       "g2_benchmark_coef": 0.7697816384714602,
       "g2_benchmark_pval": 0.004037083360617968,
-      "interpretation": "Trong mô hình trọng lực PPML chuẩn có hiệu ứng cố định cặp và năm (G2), kết nối vận tải song phương LSBCI tác động dương rất mạnh đến thương mại (hệ số = 0.770***, p = 0.004). Khi đưa vào đầy đủ hiệu ứng cấu trúc Exporter-Year và Importer-Year cùng Pair FE (G1), hệ số LSBCI chuyển sang không có ý nghĩa thống kê (-0.195, p = 0.422) do toàn bộ biến động theo thời gian của hạ tầng quốc gia và cặp nước đã bị hấp thụ triệt để bởi các biến giả đa chiều."
+      "interpretation": "Mô hình trọng lực cấu trúc ưu tiên G1 (kiểm soát đồng thời hiệu ứng cố định Cặp nước, Nước xuất khẩu-Năm và Nước nhập khẩu-Năm) ước lượng hệ số LSBCI là -0.195 (p = 0.422), không có ý nghĩa thống kê và mang dấu âm. Mối quan hệ đồng biến có ý nghĩa thống kê (0.770***, p = 0.004) chỉ xuất hiện trong mô hình trọng lực chuẩn G2 ít khắt khe hơn (chỉ có Cặp FE và Năm FE). Vì vậy, kết luận khách quan của bài báo là mối quan hệ dương không bền vững trước đặc tả trọng lực cấu trúc đầy đủ, và H2 không được ủng hộ trong mô hình ưu tiên."
     },
     "H3_ASEAN6_vs_CLMV": {
       "statement": "Tác động cận biên của kết nối vận tải biển khác nhau giữa ASEAN-6 và CLMV",
-      "status": "CONFIRMED (Chấp nhận)",
+      "status": "WEAK EVIDENCE AT 10% (INCONCLUSIVE AT 5%)",
       "interaction_coef": 0.6598641326555139,
       "interaction_p_value": 0.07250336381317553,
       "total_clmv_coef": 1.1858947883282145,
       "total_clmv_p_value": 0.0021779883306979756,
-      "interpretation": "Kiểm định tổ hợp tuyến tính mô hình M5 PPML cho thấy tổng tác động biên của LSCI đối với nhóm CLMV đạt 1.186*** (SE = 0.267, p = 0.002), vượt trội so với tác động ở nhóm ASEAN-6 (hệ số cơ sở = 0.526). Hệ số tương tác chênh lệch dương (0.660*, p = 0.073) chứng minh nhóm CLMV có độ nhạy và dư địa hưởng lợi từ kết nối vận tải biển cao hơn."
+      "interpretation": "Kiểm định hệ số tương tác lsci_clmv trong mô hình M5 PPML cho thấy chênh lệch độ co giãn giữa CLMV và ASEAN-6 là dương (+0.660*, p = 0.073), chỉ đạt ý nghĩa thống kê ở mức 10% và chưa đủ mức ý nghĩa chuẩn 5%. Tổng tác động biên của LSCI đối với nhóm CLMV đạt 1.186*** (SE = 0.267, p = 0.002), khẳng định LSCI có tác động dương rõ rệt và khác 0 đối với xuất khẩu của CLMV. Tuy nhiên, bằng chứng về việc tác động của CLMV cao hơn có ý nghĩa thống kê so với ASEAN-6 chỉ ở mức yếu (weak evidence at 10%, inconclusive at 5%)."
     },
     "H4_Agri_vs_Manufacturing": {
       "statement": "Kết nối vận tải biển có tác động lớn hơn đối với hàng chế biến, chế tạo so với nông-thủy sản",
-      "status": "CONFIRMED (Chấp nhận)",
+      "status": "SUGGESTIVE EVIDENCE AT 10% (INCONCLUSIVE AT 5%)",
       "mfg_coef": 1.117915856805304,
       "mfg_p_value": 0.005272696735690449,
       "fuels_coef": -0.16317844095591028,
       "fuels_p_value": 0.7292242196035531,
       "agri_coef": 0.12402434731759726,
       "agri_p_value": 0.6692164419808566,
-      "interpretation": "Khi bóc tách độc lập nhóm Nhiên liệu & Khoáng sản HS 25–27 (loại trừ biến dạng từ dầu khí Brunei), kết nối vận tải biển LSCI tác động mạnh mẽ và có ý nghĩa thống kê cao đối với hàng Công nghiệp chế biến - chế tạo HS 28–96 (1.118***, p = 0.005). Ngược lại, tác động lên Nông-thủy sản HS 01–24 (0.124, p = 0.669) và Nhiên liệu (-0.163, p = 0.729) hoàn toàn không có ý nghĩa thống kê, khẳng định mạng lưới tàu container gắn liền với chuỗi cung ứng sản phẩm công nghiệp."
+      "direct_test_mfg_minus_agri_coef": 0.6136255143254403,
+      "direct_test_mfg_minus_agri_pval": 0.07445757455135833,
+      "direct_test_mfg_minus_fuels_coef": 0.3147793909085884,
+      "direct_test_mfg_minus_fuels_pval": 0.4958367677894452,
+      "interpretation": "Trong các hồi quy tách biệt từng ngành hàng, LSCI có tác động mạnh và có ý nghĩa thống kê cao đối với hàng Công nghiệp chế tạo HS 28–96 (1.118***, p = 0.005), trong khi không có ý nghĩa đối với Nông-thủy sản HS 01–24 (0.124, p = 0.669) và Nhiên liệu HS 25–27 (-0.163, p = 0.729). Tuy nhiên, khi kiểm định trực tiếp khác biệt hệ số thông qua mô hình PPML gộp đa ngành hàng (Pooled Product PPML), chênh lệch độ dốc giữa Chế tạo và Nông sản là +0.614* (p = 0.074), chỉ đạt ý nghĩa ở mức 10% và chưa đạt mức 5%. Chênh lệch giữa Chế tạo và Nhiên liệu là +0.315 (p = 0.496). Do đó, H4 được xem là có bằng chứng gợi ý ở mức 10% (suggestive evidence at 10%), nhưng chưa đủ cơ sở bác bỏ giả thuyết vô hiệu ở mức 5%."
     }
   },
   "econometric_diagnostics": {
@@ -76,7 +80,7 @@
       "centered_vif_status": "Tất cả các biến trong mô hình có VIF tập trung < 12 (LSCI = 7.70, FDI = 1.53, Pop = 3.50), và VIF sau khi trừ bình quân quốc gia (within-country) đều < 3.70, loại trừ hoàn toàn rủi ro đa cộng tuyến nghiêm trọng."
     },
     "small_sample_inference": {
-      "method": "Clustered Standard Errors kết hợp phân phối Student-t với bậc tự do mẫu nhỏ (use_t=True), đảm bảo tính thận trọng và không phóng đại mức ý nghĩa thống kê với 9 cụm quốc gia."
+      "method": "Clustered Standard Errors kết hợp phân phối Student-t với bậc tự do mẫu nhỏ (use_t=True, df = G-1), đảm bảo tính thận trọng và không phóng đại mức ý nghĩa thống kê với 9 cụm quốc gia."
     }
   },
   "tables_generated": [

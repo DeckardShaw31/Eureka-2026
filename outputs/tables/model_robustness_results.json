@@ -199,9 +199,9 @@
       "pval": 0.061183918985109706
     }
   },
-  "R11_placebo": {
-    "id": "R11_placebo",
-    "name": "11. Placebo Test (LSCI Lead 1)",
+  "R12_placebo": {
+    "id": "R12_placebo",
+    "name": "12. Placebo Test (LSCI Lead 1)",
     "desc": "LSCI năm t+1 (Kiểm tra kỳ vọng & tự tương quan)",
     "key_var": "ln_lsci_lead1",
     "n_obs": 126,
@@ -217,6 +217,36 @@
       "coef": 0.689818177978748,
       "se": 0.23953587488685282,
       "pval": 0.020517472626677385
+    }
+  },
+  "R_pooled_product": {
+    "id": "R_pooled_product",
+    "name": "Mô hình gộp ngành hàng PPML (Kiểm định trực tiếp H4)",
+    "desc": "Bảng gộp 3 nhóm ngành hàng (N = 405, 9 cụm quốc gia)",
+    "n_obs": 405,
+    "n_clusters": 9,
+    "pseudo_ll": -1365388578891.313,
+    "agri_baseline": {
+      "coef": 0.5386083638773745,
+      "se": 0.2453974590495952,
+      "pval": 0.05947041922483371
+    },
+    "diff_mfg_minus_agri": {
+      "coef": 0.6136255143254403,
+      "se": 0.29926565027904545,
+      "tval": 2.050437508458706,
+      "pval": 0.07445757455135833
+    },
+    "diff_mfg_minus_fuels": {
+      "coef": 0.3147793909085884,
+      "se": 0.44119310870074663,
+      "tval": 0.7134730454779104,
+      "pval": 0.4958367677894452
+    },
+    "diff_fuels_minus_agri": {
+      "coef": 0.2988461234168519,
+      "se": 0.500877747169933,
+      "pval": 0.5672409568349195
     }
   }
 }

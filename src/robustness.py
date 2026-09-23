@@ -10,9 +10,124 @@ PROCESSED_DIR = os.path.join('data', 'processed')
 TABLES_DIR = os.path.join('outputs', 'tables')
 LOGS_DIR = os.path.join('outputs', 'logs')
 
+def estimate_pooled_product_panel(sample_full):
+    """
+    Ước lượng mô hình PPML gộp đa ngành hàng (Pooled Product-Panel PPML):
+    Kiểm định trực tiếp giả thuyết H4 xem hệ số độ co giãn LSCI của ngành chế tạo
+    có khác biệt có ý nghĩa thống kê so với nông sản và nhiên liệu hay không
+    (tránh lỗi ngụy biện so sánh chéo hệ số theo Gelman & Stern, 2006).
+    
+    Quy đổi bảng sang dạng dọc: 9 nước x 15 năm x 3 nhóm hàng = 405 quan sát.
+    Phương trình:
+      E(Export_{ikt}) = exp[ beta_agri * ln_LSCI_{it} 
+                            + beta_{diff_mfg} * (ln_LSCI_{it} x Mfg_k)
+                            + beta_{diff_fuels} * (ln_LSCI_{it} x Fuels_k)
+                            + C(product) + ln_gdp + ln_pop + C(iso3) + C(year) ]
+    """
+    records = []
+    for _, r in sample_full.iterrows():
+        # Nhóm 1: Nông - thủy sản (HS 01-24) - làm nhóm cơ sở (reference group)
+        records.append({
+            'iso3': r['iso3'], 'year': r['year'], 'ln_lsci': r['ln_lsci'],
+            'ln_gdp': r['ln_gdp'], 'ln_population': r['ln_population'],
+            'product': 'agri', 'export_val': r['export_usd_agri']
+        })
+        # Nhóm 2: Nhiên liệu & Khoáng sản (HS 25-27)
+        records.append({
+            'iso3': r['iso3'], 'year': r['year'], 'ln_lsci': r['ln_lsci'],
+            'ln_gdp': r['ln_gdp'], 'ln_population': r['ln_population'],
+            'product': 'fuels', 'export_val': r['export_usd_fuels']
+        })
+        # Nhóm 3: Chế biến - Chế tạo (HS 28-96)
+        records.append({
+            'iso3': r['iso3'], 'year': r['year'], 'ln_lsci': r['ln_lsci'],
+            'ln_gdp': r['ln_gdp'], 'ln_population': r['ln_population'],
+            'product': 'mfg', 'export_val': r['export_usd_mfg']
+        })
+    df_long = pd.DataFrame(records)
+    df_long['is_mfg'] = (df_long['product'] == 'mfg').astype(int)
+    df_long['is_fuels'] = (df_long['product'] == 'fuels').astype(int)
+    df_long['lsci_mfg'] = df_long['ln_lsci'] * df_long['is_mfg']
+    df_long['lsci_fuels'] = df_long['ln_lsci'] * df_long['is_fuels']
+    
+    formula = (
+        'export_val ~ ln_lsci + lsci_mfg + lsci_fuels + C(product) '
+        '+ ln_gdp + ln_population + C(iso3) + C(year)'
+    )
+    
+    print("\n--- Chạy Mô hình gộp đa ngành hàng kiểm định khác biệt hệ số (N = 405, Cụm = 9) ---")
+    res = smf.glm(formula, data=df_long, family=sm.families.Poisson()).fit(
+        cov_type='cluster', use_t=True, cov_kwds={'groups': df_long['iso3']}
+    )
+    
+    # 1. Hệ số cơ sở của Nông nghiệp
+    c_agri = float(res.params['ln_lsci'])
+    se_agri = float(res.bse['ln_lsci'])
+    p_agri = float(res.pvalues['ln_lsci'])
+    
+    # 2. Chênh lệch Chế tạo vs Nông nghiệp (beta_diff_mfg)
+    c_diff_mfg_agri = float(res.params['lsci_mfg'])
+    se_diff_mfg_agri = float(res.bse['lsci_mfg'])
+    t_diff_mfg_agri = float(res.tvalues['lsci_mfg'])
+    p_diff_mfg_agri = float(res.pvalues['lsci_mfg'])
+    stars_diff_mfg_agri = '***' if p_diff_mfg_agri < 0.01 else '**' if p_diff_mfg_agri < 0.05 else '*' if p_diff_mfg_agri < 0.1 else ''
+    
+    # 3. Chênh lệch Nhiên liệu vs Nông nghiệp (beta_diff_fuels)
+    c_diff_fuels_agri = float(res.params['lsci_fuels'])
+    se_diff_fuels_agri = float(res.bse['lsci_fuels'])
+    p_diff_fuels_agri = float(res.pvalues['lsci_fuels'])
+    
+    # 4. Kiểm định tổ hợp tuyến tính: Chế tạo vs Nhiên liệu (lsci_mfg - lsci_fuels = 0)
+    ttest_mfg_fuels = res.t_test('lsci_mfg - lsci_fuels = 0')
+    c_diff_mfg_fuels = float(ttest_mfg_fuels.effect.item() if hasattr(ttest_mfg_fuels.effect, 'item') else ttest_mfg_fuels.effect)
+    se_diff_mfg_fuels = float(ttest_mfg_fuels.sd.item() if hasattr(ttest_mfg_fuels.sd, 'item') else ttest_mfg_fuels.sd)
+    t_diff_mfg_fuels = float(ttest_mfg_fuels.tvalue.item() if hasattr(ttest_mfg_fuels.tvalue, 'item') else ttest_mfg_fuels.tvalue)
+    p_diff_mfg_fuels = float(ttest_mfg_fuels.pvalue.item() if hasattr(ttest_mfg_fuels.pvalue, 'item') else ttest_mfg_fuels.pvalue)
+    stars_diff_mfg_fuels = '***' if p_diff_mfg_fuels < 0.01 else '**' if p_diff_mfg_fuels < 0.05 else '*' if p_diff_mfg_fuels < 0.1 else ''
+    
+    print(f"  -> Hệ số LSCI Nông sản (Cơ sở): {c_agri:.3f} (SE = {se_agri:.3f}, p = {format_pval(p_agri)})")
+    print(f"  -> Chênh lệch Chế tạo vs Nông sản: {c_diff_mfg_agri:.3f}{stars_diff_mfg_agri} (SE = {se_diff_mfg_agri:.3f}, p = {format_pval(p_diff_mfg_agri)})")
+    print(f"  -> Chênh lệch Chế tạo vs Nhiên liệu: {c_diff_mfg_fuels:.3f}{stars_diff_mfg_fuels} (SE = {se_diff_mfg_fuels:.3f}, p = {format_pval(p_diff_mfg_fuels)})")
+    
+    pooled_metrics = {
+        'id': 'R_pooled_product',
+        'name': 'Mô hình gộp ngành hàng PPML (Kiểm định trực tiếp H4)',
+        'desc': 'Bảng gộp 3 nhóm ngành hàng (N = 405, 9 cụm quốc gia)',
+        'n_obs': int(len(df_long)),
+        'n_clusters': int(df_long['iso3'].nunique()),
+        'pseudo_ll': float(res.llf),
+        'agri_baseline': {
+            'coef': c_agri, 'se': se_agri, 'pval': p_agri
+        },
+        'diff_mfg_minus_agri': {
+            'coef': c_diff_mfg_agri, 'se': se_diff_mfg_agri, 'tval': t_diff_mfg_agri, 'pval': p_diff_mfg_agri
+        },
+        'diff_mfg_minus_fuels': {
+            'coef': c_diff_mfg_fuels, 'se': se_diff_mfg_fuels, 'tval': t_diff_mfg_fuels, 'pval': p_diff_mfg_fuels
+        },
+        'diff_fuels_minus_agri': {
+            'coef': c_diff_fuels_agri, 'se': se_diff_fuels_agri, 'pval': p_diff_fuels_agri
+        }
+    }
+    
+    # Dòng đưa vào bảng bảng kiểm định độ bền
+    row_pooled = {
+        'Kiểm định độ bền': '11. Chênh lệch Chế tạo vs Nông sản (Pooled)',
+        'Mô tả mẫu': 'Kiểm định trực tiếp khác biệt hệ số: Mfg - Agri (HS 28–96 vs HS 01–24)',
+        'Hệ số LSCI': f"{c_diff_mfg_agri:.3f}{stars_diff_mfg_agri}",
+        'SE LSCI': f"({se_diff_mfg_agri:.3f})",
+        'P-value LSCI': format_pval(p_diff_mfg_agri),
+        'Hệ số ln(GDP)': f"{float(res.params.get('ln_gdp', 0)):.3f}",
+        'SE GDP': f"({float(res.bse.get('ln_gdp', 0)):.3f})",
+        'Số quan sát (N)': len(df_long),
+        'Số nước': int(df_long['iso3'].nunique()),
+        'Pseudo LL': f"{res.llf:.1f}"
+    }
+    return pooled_metrics, row_pooled
+
 def run_robustness_checks():
     """
-    Thực hiện 11 kiểm định độ bền và độ nhạy theo Mục 11.3 của design.md:
+    Thực hiện hệ thống kiểm định độ bền và độ nhạy theo Mục 11.3 của design.md:
     1. Mẫu cơ sở PPML (Toàn bộ 9 nước ASEAN ven biển, 2010-2024)
     2. Kiểm soát xu hướng thời gian riêng của từng quốc gia (Country-specific linear trends)
     3. Loại bỏ Singapore (loại ngoại lai trung tâm trung chuyển hàng hải)
@@ -23,7 +138,8 @@ def run_robustness_checks():
     8. Phân tích theo nhóm hàng: Chế biến - Chế tạo chuẩn (HS 28-96, tách biệt nhiên liệu)
     9. Phân tích theo nhóm hàng: Nhiên liệu & Khoáng sản (HS 25-27, cô lập dầu khí Brunei)
     10. Phân tích theo nhóm hàng: Nông - Thủy sản (HS 01-24)
-    11. Kiểm định kỳ vọng/dẫn trước Placebo (LSCI Lead 1)
+    11. Kiểm định trực tiếp khác biệt ngành hàng (Pooled Product-Panel PPML)
+    12. Kiểm định kỳ vọng/dẫn trước Placebo (LSCI Lead 1)
     
     Tất cả các mô hình đều áp dụng Clustered SE theo quốc gia và hiệu chỉnh mẫu nhỏ Student-t.
     """
@@ -120,8 +236,8 @@ def run_robustness_checks():
             'desc': 'Kiểm định H4 (Hàng nông nghiệp truyền thống)'
         },
         {
-            'id': 'R11_placebo',
-            'name': '11. Placebo Test (LSCI Lead 1)',
+            'id': 'R12_placebo',
+            'name': '12. Placebo Test (LSCI Lead 1)',
             'formula': 'export_usd ~ ln_lsci_lead1 + ln_gdp + ln_population + C(iso3) + C(year)',
             'data': sample_full.dropna(subset=['ln_lsci_lead1']),
             'key_var': 'ln_lsci_lead1',
@@ -195,6 +311,12 @@ def run_robustness_checks():
             } if not np.isnan(c_gdp) else None
         }
         
+    # Chạy mô hình gộp ngành hàng kiểm định trực tiếp khác biệt hệ số (H4)
+    pooled_metrics, row_pooled = estimate_pooled_product_panel(sample_full)
+    structured_robustness['R_pooled_product'] = pooled_metrics
+    # Chèn dòng mô hình gộp vào trước Placebo test
+    rows.insert(-1, row_pooled)
+    
     df_robust = pd.DataFrame(rows)
     out_csv = os.path.join(TABLES_DIR, 'table_robustness.csv')
     out_tex = os.path.join(TABLES_DIR, 'table_robustness.tex')

@@ -14,24 +14,25 @@ Nghiên cứu áp dụng phương pháp hồi quy Poisson Pseudo-Maximum Likelih
 
 ## 2. Kết quả kiểm định các giả thuyết cốt lõi
 
-| Giả thuyết | Đặc tả thực nghiệm | Hệ số ước lượng | Ý nghĩa thống kê | Kết luận thực nghiệm |
+| Giả thuyết | Đặc tả thực nghiệm | Hệ số ước lượng | Ý nghĩa thống kê | Kết luận thực nghiệm chuẩn mực |
 |---|---|---|---|---|
-| **H1: LSCI tác động dương tới tổng xuất khẩu** | M1 & M2 PPML (Tầng A) | M1: \(\beta = 1.192^{**}\)<br>M2: \(\beta = 1.039^{***}\) | M1: \(p = 0.014\)<br>M2: \(p = 0.006\) | **Chấp nhận** (Tăng 1% LSCI gắn liền với mức tăng 1.04% kim ngạch xuất khẩu khi đã kiểm soát quy mô GDP và dân số) |
-| **H2: LSBCI thúc đẩy xuất khẩu song phương** | G2 Trọng lực chuẩn (Cặp FE + Năm FE)<br>G1 Trọng lực cấu trúc đầy đủ (Cặp + XK-Năm + NK-Năm FE) | G2: \(\beta = 0.770^{***}\)<br>G1: \(\beta = -0.195\) | G2: \(p = 0.004\)<br>G1: \(p = 0.422\) | **Ủng hộ có điều kiện** (Tác động dương mạnh mẽ trong mô hình trọng lực chuẩn; trong cấu trúc đầy đủ, biến động song phương bị triệt tiêu bởi hiệu ứng cố định cặp và thời gian) |
-| **H3: Hiệu ứng biên lớn hơn ở nhóm CLMV** | M5 PPML Tương tác (Tầng A) & Kiểm định tổ hợp tuyến tính | Tương tác: \(+0.660^{*}\)<br>Tổng CLMV: \(1.186^{***}\) | Tương tác: \(p = 0.073\)<br>Tổng CLMV: \(p = 0.002\) | **Chấp nhận** (Tổng tác động cận biên đối với CLMV đạt 1.186***, cao hơn đáng kể so với mức 0.526 của nhóm ASEAN-6) |
-| **H4: Tác động mạnh hơn với hàng chế tạo** | Robustness R8 (Chế tạo), R9 (Nhiên liệu), R10 (Nông sản) | Chế tạo (HS 28–96): \(1.118^{***}\)<br>Nhiên liệu (HS 25–27): \(-0.163\)<br>Nông sản (HS 01–24): \(0.124\) | Chế tạo: \(p = 0.005\)<br>Nhiên liệu: \(p = 0.729\)<br>Nông sản: \(p = 0.669\) | **Chấp nhận** (Mạng lưới tàu container thúc đẩy mạnh mẽ hàng công nghiệp chế tạo; không có ý nghĩa với nông sản và nhiên liệu) |
+| **H1: LSCI tác động dương tới tổng xuất khẩu** | M1 & M2 PPML (Tầng A) | M1: \(\beta = 1.192^{**}\)<br>M2: \(\beta = 1.039^{***}\) | M1: \(p = 0.014\)<br>M2: \(p = 0.006\) | **Ủng hộ (Mối quan hệ đồng biến bền vững)**: Tăng 1% LSCI gắn liền với mức tăng 1.04% xuất khẩu khi kiểm soát GDP và dân số; do biến trễ và lead phản ánh quán tính vĩ mô cao nên được diễn giải là mối quan hệ đồng biến bền vững thay vì ngoại sinh nhân quả thuần túy. |
+| **H2: LSBCI thúc đẩy xuất khẩu song phương** | G1 Cấu trúc ưu tiên (Cặp + XK-Năm + NK-Năm FE)<br>G2 Trọng lực chuẩn (Cặp FE + Năm FE) | G1: \(\beta = -0.195\)<br>G2: \(\beta = 0.770^{***}\) | G1: \(p = 0.422\)<br>G2: \(p = 0.004\) | **Không được ủng hộ trong mô hình cấu trúc ưu tiên**: Tác động dương chỉ xuất hiện trong mô hình G2 ít khắt khe; trong mô hình cấu trúc đầy đủ G1 (kiểm soát toàn diện sức cản đa phương thời gian), hệ số mang dấu âm và không có ý nghĩa thống kê. |
+| **H3: Hiệu ứng biên lớn hơn ở nhóm CLMV** | M5 PPML Tương tác & Tổ hợp tuyến tính (Tầng A) | Chênh lệch tương tác: \(+0.660^{*}\)<br>Tổng tác động CLMV: \(1.186^{***}\) | Tương tác: \(p = 0.073\)<br>Tổng CLMV: \(p = 0.002\) | **Bằng chứng yếu ở mức 10% (Chưa đủ cơ sở ở mức 5%)**: Tổng tác động lên CLMV khác 0 rất mạnh (\(1.186^{***}\)), nhưng chênh lệch giữa CLMV và ASEAN-6 chỉ có ý nghĩa thống kê ở mức 10% (\(p = 0.073\)) và không đạt mức ý nghĩa 5%. |
+| **H4: Tác động mạnh hơn với hàng chế tạo** | Bảng gộp đa ngành (Pooled Product PPML) & Hồi quy phân tách | Chênh lệch Chế tạo vs Nông sản: \(+0.614^{*}\)<br>Chế tạo (HS 28–96): \(1.118^{***}\)<br>Nông sản (HS 01–24): \(0.124\) | Chênh lệch: \(p = 0.074\)<br>Chế tạo: \(p = 0.005\)<br>Nông sản: \(p = 0.669\) | **Bằng chứng gợi ý ở mức 10% (Chưa đủ cơ sở ở mức 5%)**: Dù LSCI chỉ có ý nghĩa với chế tạo trong hồi quy riêng, kiểm định trực tiếp chênh lệch hệ số (Pooled difference test) cho thấy mức chênh \(+0.614\) chỉ đạt ý nghĩa ở mức 10% (\(p = 0.074\)), chưa đạt mức 5%. |
 
 ---
 
 ## 3. Các cải tiến kinh tế lượng chuẩn mực (Manuscript-Ready)
 
-1. **Chuẩn hóa dữ liệu thương mại song phương**: Dữ liệu xuất khẩu của Việt Nam năm 2024 chưa báo cáo trên UN Comtrade được bảo lưu chính xác dưới dạng `NaN` (không điền số 0 giả mạo), loại bỏ 24 quan sát sai lệch làm méo mó mô hình trọng lực.
+1. **Chuẩn hóa dữ liệu thương mại song phương**: Dữ liệu xuất khẩu của Việt Nam năm 2024 chưa báo cáo trên UN Comtrade được bảo lưu chính xác dưới dạng `NaN` (không điền số 0 giả mạo), loại bỏ 24 quan sát sai lệch làm méo mó mô hình trọng lực; mẫu ước lượng song phương đạt chính xác **3.082 quan sát, 207 cặp nước và 142 quan sát 0 thực tế**.
 2. **Ước lượng Trọng lực cấu trúc đầy đủ (Full Structural Gravity)**: Triển khai thành công mô hình G1 với đồng thời Cặp quốc gia FE, Nước xuất khẩu-Năm FE và Nước nhập khẩu-Năm FE thông qua thuật toán phân rã QR có hoán vị cột (QR with pivoting) để khử 45 biến giả đa cộng tuyến hoàn hảo.
-3. **Phân loại ngành hàng chuẩn xác (Bóc tách Dầu khí Brunei)**: Tách riêng nhóm Nhiên liệu & Khoáng sản (HS 25–27, chiếm 78% xuất khẩu Brunei) khỏi Công nghiệp Chế biến - Chế tạo thuần túy (HS 28–96), giải quyết triệt để biến dạng mẫu.
-4. **Suy diễn thống kê mẫu nhỏ**: Toàn bộ mô hình áp dụng Clustered SE kèm phân phối Student-t với bậc tự do mẫu nhỏ (`use_t=True`, \(df = G - 1\)), không phóng đại giá trị p đối với 9 cụm quốc gia.
-5. **Kiểm định xu hướng thời gian riêng của từng nước**: Hiệu ứng của LSCI vẫn giữ vững ý nghĩa thống kê dương (\(\beta = 0.328^{**}, p = 0.017\)) sau khi đưa vào xu hướng tuyến tính riêng của từng nước (`iso3:trend`).
-6. **Kiểm định VIF tập trung và biến đổi cố định**: Bổ sung hằng số vào tính toán VIF, kết quả VIF tập trung đều dưới 12 và VIF sau khi trừ bình quân nhóm (Within-country) đều dưới 3.70, khẳng định không tồn tại vấn đề đa cộng tuyến nghiêm trọng.
-7. **Tự động hóa hoàn toàn không hard-code**: Toàn bộ kết luận, bảng biểu, số liệu trong `summary_findings.json` và README được cập nhật động trực tiếp từ kết quả ước lượng mô hình.
+3. **Kiểm định trực tiếp khác biệt hệ số ngành hàng (Pooled Product PPML)**: Xây dựng bảng gộp 405 quan sát (9 nước x 15 năm x 3 nhóm hàng) để kiểm định trực tiếp chênh lệch giữa Chế tạo, Nông sản và Nhiên liệu, tránh lỗi ngụy biện so sánh chéo hệ số.
+4. **Phân loại ngành hàng chuẩn xác (Bóc tách Dầu khí Brunei)**: Tách riêng nhóm Nhiên liệu & Khoáng sản (HS 25–27, chiếm 78% xuất khẩu Brunei) khỏi Công nghiệp Chế biến - Chế tạo thuần túy (HS 28–96), giải quyết triệt để biến dạng mẫu.
+5. **Suy diễn thống kê mẫu nhỏ**: Toàn bộ mô hình áp dụng Clustered SE kèm phân phối Student-t với bậc tự do mẫu nhỏ (`use_t=True`, \(df = G - 1\)), không phóng đại giá trị p đối với 9 cụm quốc gia.
+6. **Kiểm định xu hướng thời gian riêng của từng nước**: Hiệu ứng của LSCI vẫn giữ vững ý nghĩa thống kê dương (\(\beta = 0.328^{**}, p = 0.017\)) sau khi đưa vào xu hướng tuyến tính riêng của từng nước (`iso3:trend`).
+7. **Kiểm định VIF tập trung và biến đổi cố định**: Bổ sung hằng số vào tính toán VIF, kết quả VIF tập trung đều dưới 12 và VIF sau khi trừ bình quân nhóm (Within-country) đều dưới 3.70, khẳng định không tồn tại vấn đề đa cộng tuyến nghiêm trọng.
+8. **Tự động hóa hoàn toàn không hard-code**: Toàn bộ kết luận, bảng biểu, số liệu trong `summary_findings.json` và README được cập nhật động trực tiếp từ kết quả ước lượng mô hình theo đúng tiêu chí kiểm định thống kê khắt khe.
 
 ---
 
