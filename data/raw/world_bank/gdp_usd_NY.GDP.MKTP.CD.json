@@ -1,0 +1,2818 @@
+[
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "BN",
+      "value": "Brunei Darussalam"
+    },
+    "countryiso3code": "BRN",
+    "date": "2025",
+    "value": 15031980994.1121,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "BN",
+      "value": "Brunei Darussalam"
+    },
+    "countryiso3code": "BRN",
+    "date": "2024",
+    "value": 15340808592.48,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "BN",
+      "value": "Brunei Darussalam"
+    },
+    "countryiso3code": "BRN",
+    "date": "2023",
+    "value": 15095084656.1634,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "BN",
+      "value": "Brunei Darussalam"
+    },
+    "countryiso3code": "BRN",
+    "date": "2022",
+    "value": 16681536466.7183,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "BN",
+      "value": "Brunei Darussalam"
+    },
+    "countryiso3code": "BRN",
+    "date": "2021",
+    "value": 14006496617.4458,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "BN",
+      "value": "Brunei Darussalam"
+    },
+    "countryiso3code": "BRN",
+    "date": "2020",
+    "value": 12005799653.9835,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "BN",
+      "value": "Brunei Darussalam"
+    },
+    "countryiso3code": "BRN",
+    "date": "2019",
+    "value": 13469235364.7032,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "BN",
+      "value": "Brunei Darussalam"
+    },
+    "countryiso3code": "BRN",
+    "date": "2018",
+    "value": 13566908391.0895,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "BN",
+      "value": "Brunei Darussalam"
+    },
+    "countryiso3code": "BRN",
+    "date": "2017",
+    "value": 12128168045.1245,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "BN",
+      "value": "Brunei Darussalam"
+    },
+    "countryiso3code": "BRN",
+    "date": "2016",
+    "value": 11400266044.6651,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "BN",
+      "value": "Brunei Darussalam"
+    },
+    "countryiso3code": "BRN",
+    "date": "2015",
+    "value": 12930296870.1247,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "BN",
+      "value": "Brunei Darussalam"
+    },
+    "countryiso3code": "BRN",
+    "date": "2014",
+    "value": 17097797386.0336,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "BN",
+      "value": "Brunei Darussalam"
+    },
+    "countryiso3code": "BRN",
+    "date": "2013",
+    "value": 18094148098.6536,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "BN",
+      "value": "Brunei Darussalam"
+    },
+    "countryiso3code": "BRN",
+    "date": "2012",
+    "value": 19048443340.7732,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "BN",
+      "value": "Brunei Darussalam"
+    },
+    "countryiso3code": "BRN",
+    "date": "2011",
+    "value": 18524791062.657,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "BN",
+      "value": "Brunei Darussalam"
+    },
+    "countryiso3code": "BRN",
+    "date": "2010",
+    "value": 13707121038.4383,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "ID",
+      "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2025",
+    "value": 1445642584163.81,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "ID",
+      "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2024",
+    "value": 1396301788461.69,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "ID",
+      "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2023",
+    "value": 1371166925749.88,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "ID",
+      "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2022",
+    "value": 1319101183380.15,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "ID",
+      "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2021",
+    "value": 1186509691086.73,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "ID",
+      "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2020",
+    "value": 1059054842698.48,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "ID",
+      "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2019",
+    "value": 1119099871350.2,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "ID",
+      "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2018",
+    "value": 1042271532988.63,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "ID",
+      "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2017",
+    "value": 1015618744159.73,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "ID",
+      "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2016",
+    "value": 931877364037.698,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "ID",
+      "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2015",
+    "value": 860854232686.214,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "ID",
+      "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2014",
+    "value": 890814755533.537,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "ID",
+      "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2013",
+    "value": 912524136718.018,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "ID",
+      "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2012",
+    "value": 917869913332.649,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "ID",
+      "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2011",
+    "value": 892969104563.171,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "ID",
+      "value": "Indonesia"
+    },
+    "countryiso3code": "IDN",
+    "date": "2010",
+    "value": 755094157621.936,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "KH",
+      "value": "Cambodia"
+    },
+    "countryiso3code": "KHM",
+    "date": "2025",
+    "value": 51267065842.9641,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "KH",
+      "value": "Cambodia"
+    },
+    "countryiso3code": "KHM",
+    "date": "2024",
+    "value": 46352647037.2406,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "KH",
+      "value": "Cambodia"
+    },
+    "countryiso3code": "KHM",
+    "date": "2023",
+    "value": 42335646895.7984,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "KH",
+      "value": "Cambodia"
+    },
+    "countryiso3code": "KHM",
+    "date": "2022",
+    "value": 39994532959.6074,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "KH",
+      "value": "Cambodia"
+    },
+    "countryiso3code": "KHM",
+    "date": "2021",
+    "value": 36790163687.4421,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "KH",
+      "value": "Cambodia"
+    },
+    "countryiso3code": "KHM",
+    "date": "2020",
+    "value": 34818073901.4851,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "KH",
+      "value": "Cambodia"
+    },
+    "countryiso3code": "KHM",
+    "date": "2019",
+    "value": 36685356407.7206,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "KH",
+      "value": "Cambodia"
+    },
+    "countryiso3code": "KHM",
+    "date": "2018",
+    "value": 33145892168.8958,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "KH",
+      "value": "Cambodia"
+    },
+    "countryiso3code": "KHM",
+    "date": "2017",
+    "value": 29355665909.7905,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "KH",
+      "value": "Cambodia"
+    },
+    "countryiso3code": "KHM",
+    "date": "2016",
+    "value": 26556545153.3573,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "KH",
+      "value": "Cambodia"
+    },
+    "countryiso3code": "KHM",
+    "date": "2015",
+    "value": 24174170369.0738,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "KH",
+      "value": "Cambodia"
+    },
+    "countryiso3code": "KHM",
+    "date": "2014",
+    "value": 22041463967.9009,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "KH",
+      "value": "Cambodia"
+    },
+    "countryiso3code": "KHM",
+    "date": "2013",
+    "value": 19807135252.8649,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "KH",
+      "value": "Cambodia"
+    },
+    "countryiso3code": "KHM",
+    "date": "2012",
+    "value": 17826536699.8016,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "KH",
+      "value": "Cambodia"
+    },
+    "countryiso3code": "KHM",
+    "date": "2011",
+    "value": 16032622023.8265,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "KH",
+      "value": "Cambodia"
+    },
+    "countryiso3code": "KHM",
+    "date": "2010",
+    "value": 13808673288.0696,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "LA",
+      "value": "Lao PDR"
+    },
+    "countryiso3code": "LAO",
+    "date": "2025",
+    "value": 18302970218.5902,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "LA",
+      "value": "Lao PDR"
+    },
+    "countryiso3code": "LAO",
+    "date": "2024",
+    "value": 16502933121.3379,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "LA",
+      "value": "Lao PDR"
+    },
+    "countryiso3code": "LAO",
+    "date": "2023",
+    "value": 15843155731.2552,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "LA",
+      "value": "Lao PDR"
+    },
+    "countryiso3code": "LAO",
+    "date": "2022",
+    "value": 15468785203.7532,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "LA",
+      "value": "Lao PDR"
+    },
+    "countryiso3code": "LAO",
+    "date": "2021",
+    "value": 18827148530.9347,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "LA",
+      "value": "Lao PDR"
+    },
+    "countryiso3code": "LAO",
+    "date": "2020",
+    "value": 18981805250.2424,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "LA",
+      "value": "Lao PDR"
+    },
+    "countryiso3code": "LAO",
+    "date": "2019",
+    "value": 18740561512.5555,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "LA",
+      "value": "Lao PDR"
+    },
+    "countryiso3code": "LAO",
+    "date": "2018",
+    "value": 18141641089.7963,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "LA",
+      "value": "Lao PDR"
+    },
+    "countryiso3code": "LAO",
+    "date": "2017",
+    "value": 17071155481.4994,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "LA",
+      "value": "Lao PDR"
+    },
+    "countryiso3code": "LAO",
+    "date": "2016",
+    "value": 15912501722.6143,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "LA",
+      "value": "Lao PDR"
+    },
+    "countryiso3code": "LAO",
+    "date": "2015",
+    "value": 14426380125.6488,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "LA",
+      "value": "Lao PDR"
+    },
+    "countryiso3code": "LAO",
+    "date": "2014",
+    "value": 13279245886.3854,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "LA",
+      "value": "Lao PDR"
+    },
+    "countryiso3code": "LAO",
+    "date": "2013",
+    "value": 11983252626.5452,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "LA",
+      "value": "Lao PDR"
+    },
+    "countryiso3code": "LAO",
+    "date": "2012",
+    "value": 10192846339.4029,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "LA",
+      "value": "Lao PDR"
+    },
+    "countryiso3code": "LAO",
+    "date": "2011",
+    "value": 8750104617.17303,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "LA",
+      "value": "Lao PDR"
+    },
+    "countryiso3code": "LAO",
+    "date": "2010",
+    "value": 7131771014.70456,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MM",
+      "value": "Myanmar"
+    },
+    "countryiso3code": "MMR",
+    "date": "2025",
+    "value": 81665773809.5238,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MM",
+      "value": "Myanmar"
+    },
+    "countryiso3code": "MMR",
+    "date": "2024",
+    "value": 74068349523.8095,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MM",
+      "value": "Myanmar"
+    },
+    "countryiso3code": "MMR",
+    "date": "2023",
+    "value": 66757619000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MM",
+      "value": "Myanmar"
+    },
+    "countryiso3code": "MMR",
+    "date": "2022",
+    "value": 62253049891.6449,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MM",
+      "value": "Myanmar"
+    },
+    "countryiso3code": "MMR",
+    "date": "2021",
+    "value": 66345291160.1683,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MM",
+      "value": "Myanmar"
+    },
+    "countryiso3code": "MMR",
+    "date": "2020",
+    "value": 79006113643.1906,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MM",
+      "value": "Myanmar"
+    },
+    "countryiso3code": "MMR",
+    "date": "2019",
+    "value": 75065106227.6892,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MM",
+      "value": "Myanmar"
+    },
+    "countryiso3code": "MMR",
+    "date": "2018",
+    "value": 67860515989.517,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MM",
+      "value": "Myanmar"
+    },
+    "countryiso3code": "MMR",
+    "date": "2017",
+    "value": 66053040483.0016,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MM",
+      "value": "Myanmar"
+    },
+    "countryiso3code": "MMR",
+    "date": "2016",
+    "value": 63298361996.2153,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MM",
+      "value": "Myanmar"
+    },
+    "countryiso3code": "MMR",
+    "date": "2015",
+    "value": 59607290407.6191,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MM",
+      "value": "Myanmar"
+    },
+    "countryiso3code": "MMR",
+    "date": "2014",
+    "value": 65531374199.6663,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MM",
+      "value": "Myanmar"
+    },
+    "countryiso3code": "MMR",
+    "date": "2013",
+    "value": 60269732854.827,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MM",
+      "value": "Myanmar"
+    },
+    "countryiso3code": "MMR",
+    "date": "2012",
+    "value": 59937796648.2158,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MM",
+      "value": "Myanmar"
+    },
+    "countryiso3code": "MMR",
+    "date": "2011",
+    "value": 59977326085.9908,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MM",
+      "value": "Myanmar"
+    },
+    "countryiso3code": "MMR",
+    "date": "2010",
+    "value": 49540813342.4834,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MY",
+      "value": "Malaysia"
+    },
+    "countryiso3code": "MYS",
+    "date": "2025",
+    "value": 472193128644.597,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MY",
+      "value": "Malaysia"
+    },
+    "countryiso3code": "MYS",
+    "date": "2024",
+    "value": 422227005428.688,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MY",
+      "value": "Malaysia"
+    },
+    "countryiso3code": "MYS",
+    "date": "2023",
+    "value": 399949418752.657,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MY",
+      "value": "Malaysia"
+    },
+    "countryiso3code": "MYS",
+    "date": "2022",
+    "value": 407830525989.553,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MY",
+      "value": "Malaysia"
+    },
+    "countryiso3code": "MYS",
+    "date": "2021",
+    "value": 373784553029.978,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MY",
+      "value": "Malaysia"
+    },
+    "countryiso3code": "MYS",
+    "date": "2020",
+    "value": 337456163961.211,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MY",
+      "value": "Malaysia"
+    },
+    "countryiso3code": "MYS",
+    "date": "2019",
+    "value": 365177721021.516,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MY",
+      "value": "Malaysia"
+    },
+    "countryiso3code": "MYS",
+    "date": "2018",
+    "value": 358788845712.53,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MY",
+      "value": "Malaysia"
+    },
+    "countryiso3code": "MYS",
+    "date": "2017",
+    "value": 319109094160.343,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MY",
+      "value": "Malaysia"
+    },
+    "countryiso3code": "MYS",
+    "date": "2016",
+    "value": 301256033870.334,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MY",
+      "value": "Malaysia"
+    },
+    "countryiso3code": "MYS",
+    "date": "2015",
+    "value": 301355266964.947,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MY",
+      "value": "Malaysia"
+    },
+    "countryiso3code": "MYS",
+    "date": "2014",
+    "value": 338066095097.254,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MY",
+      "value": "Malaysia"
+    },
+    "countryiso3code": "MYS",
+    "date": "2013",
+    "value": 323276235524.415,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MY",
+      "value": "Malaysia"
+    },
+    "countryiso3code": "MYS",
+    "date": "2012",
+    "value": 314443047642.111,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MY",
+      "value": "Malaysia"
+    },
+    "countryiso3code": "MYS",
+    "date": "2011",
+    "value": 297951668674.835,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "MY",
+      "value": "Malaysia"
+    },
+    "countryiso3code": "MYS",
+    "date": "2010",
+    "value": 255017638455.59,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "PH",
+      "value": "Philippines"
+    },
+    "countryiso3code": "PHL",
+    "date": "2025",
+    "value": 487086123720.417,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "PH",
+      "value": "Philippines"
+    },
+    "countryiso3code": "PHL",
+    "date": "2024",
+    "value": 461671157904.74,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "PH",
+      "value": "Philippines"
+    },
+    "countryiso3code": "PHL",
+    "date": "2023",
+    "value": 437055627245.138,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "PH",
+      "value": "Philippines"
+    },
+    "countryiso3code": "PHL",
+    "date": "2022",
+    "value": 404353369604.631,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "PH",
+      "value": "Philippines"
+    },
+    "countryiso3code": "PHL",
+    "date": "2021",
+    "value": 394087359848.11,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "PH",
+      "value": "Philippines"
+    },
+    "countryiso3code": "PHL",
+    "date": "2020",
+    "value": 361751145451.597,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "PH",
+      "value": "Philippines"
+    },
+    "countryiso3code": "PHL",
+    "date": "2019",
+    "value": 376823402239.136,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "PH",
+      "value": "Philippines"
+    },
+    "countryiso3code": "PHL",
+    "date": "2018",
+    "value": 346841896587.313,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "PH",
+      "value": "Philippines"
+    },
+    "countryiso3code": "PHL",
+    "date": "2017",
+    "value": 328480736802.76,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "PH",
+      "value": "Philippines"
+    },
+    "countryiso3code": "PHL",
+    "date": "2016",
+    "value": 318627003016.731,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "PH",
+      "value": "Philippines"
+    },
+    "countryiso3code": "PHL",
+    "date": "2015",
+    "value": 306445871242.322,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "PH",
+      "value": "Philippines"
+    },
+    "countryiso3code": "PHL",
+    "date": "2014",
+    "value": 297483555338.044,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "PH",
+      "value": "Philippines"
+    },
+    "countryiso3code": "PHL",
+    "date": "2013",
+    "value": 283902828588.718,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "PH",
+      "value": "Philippines"
+    },
+    "countryiso3code": "PHL",
+    "date": "2012",
+    "value": 261920540962.63,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "PH",
+      "value": "Philippines"
+    },
+    "countryiso3code": "PHL",
+    "date": "2011",
+    "value": 234216730291.32,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "PH",
+      "value": "Philippines"
+    },
+    "countryiso3code": "PHL",
+    "date": "2010",
+    "value": 208368893151.144,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "SG",
+      "value": "Singapore"
+    },
+    "countryiso3code": "SGP",
+    "date": "2025",
+    "value": 603869516998.738,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "SG",
+      "value": "Singapore"
+    },
+    "countryiso3code": "SGP",
+    "date": "2024",
+    "value": 572877260178.427,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "SG",
+      "value": "Singapore"
+    },
+    "countryiso3code": "SGP",
+    "date": "2023",
+    "value": 511181761243.76,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "SG",
+      "value": "Singapore"
+    },
+    "countryiso3code": "SGP",
+    "date": "2022",
+    "value": 514252535238.749,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "SG",
+      "value": "Singapore"
+    },
+    "countryiso3code": "SGP",
+    "date": "2021",
+    "value": 441110903524.645,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "SG",
+      "value": "Singapore"
+    },
+    "countryiso3code": "SGP",
+    "date": "2020",
+    "value": 351226533656.292,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "SG",
+      "value": "Singapore"
+    },
+    "countryiso3code": "SGP",
+    "date": "2019",
+    "value": 376827390962.044,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "SG",
+      "value": "Singapore"
+    },
+    "countryiso3code": "SGP",
+    "date": "2018",
+    "value": 377976367877.038,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "SG",
+      "value": "Singapore"
+    },
+    "countryiso3code": "SGP",
+    "date": "2017",
+    "value": 344795119213.571,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "SG",
+      "value": "Singapore"
+    },
+    "countryiso3code": "SGP",
+    "date": "2016",
+    "value": 320759207438.623,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "SG",
+      "value": "Singapore"
+    },
+    "countryiso3code": "SGP",
+    "date": "2015",
+    "value": 307998545269.398,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "SG",
+      "value": "Singapore"
+    },
+    "countryiso3code": "SGP",
+    "date": "2014",
+    "value": 314863580758.455,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "SG",
+      "value": "Singapore"
+    },
+    "countryiso3code": "SGP",
+    "date": "2013",
+    "value": 307576360584.992,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "SG",
+      "value": "Singapore"
+    },
+    "countryiso3code": "SGP",
+    "date": "2012",
+    "value": 295092888076.589,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "SG",
+      "value": "Singapore"
+    },
+    "countryiso3code": "SGP",
+    "date": "2011",
+    "value": 279356499090.458,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "SG",
+      "value": "Singapore"
+    },
+    "countryiso3code": "SGP",
+    "date": "2010",
+    "value": 239807980591.24,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TH",
+      "value": "Thailand"
+    },
+    "countryiso3code": "THA",
+    "date": "2025",
+    "value": 577009981112.015,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TH",
+      "value": "Thailand"
+    },
+    "countryiso3code": "THA",
+    "date": "2024",
+    "value": 529385520941.539,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TH",
+      "value": "Thailand"
+    },
+    "countryiso3code": "THA",
+    "date": "2023",
+    "value": 517013369475.121,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TH",
+      "value": "Thailand"
+    },
+    "countryiso3code": "THA",
+    "date": "2022",
+    "value": 495691837308.033,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TH",
+      "value": "Thailand"
+    },
+    "countryiso3code": "THA",
+    "date": "2021",
+    "value": 506049783824.94,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TH",
+      "value": "Thailand"
+    },
+    "countryiso3code": "THA",
+    "date": "2020",
+    "value": 500274927778.532,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TH",
+      "value": "Thailand"
+    },
+    "countryiso3code": "THA",
+    "date": "2019",
+    "value": 543976691793.886,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TH",
+      "value": "Thailand"
+    },
+    "countryiso3code": "THA",
+    "date": "2018",
+    "value": 506754208404.485,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TH",
+      "value": "Thailand"
+    },
+    "countryiso3code": "THA",
+    "date": "2017",
+    "value": 456356813536.764,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TH",
+      "value": "Thailand"
+    },
+    "countryiso3code": "THA",
+    "date": "2016",
+    "value": 413366349747.508,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TH",
+      "value": "Thailand"
+    },
+    "countryiso3code": "THA",
+    "date": "2015",
+    "value": 401296238228.084,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TH",
+      "value": "Thailand"
+    },
+    "countryiso3code": "THA",
+    "date": "2014",
+    "value": 407339040197.651,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TH",
+      "value": "Thailand"
+    },
+    "countryiso3code": "THA",
+    "date": "2013",
+    "value": 420333654592.547,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TH",
+      "value": "Thailand"
+    },
+    "countryiso3code": "THA",
+    "date": "2012",
+    "value": 397558325278.579,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TH",
+      "value": "Thailand"
+    },
+    "countryiso3code": "THA",
+    "date": "2011",
+    "value": 370818739623.622,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TH",
+      "value": "Thailand"
+    },
+    "countryiso3code": "THA",
+    "date": "2010",
+    "value": 341104766329.17,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TL",
+      "value": "Timor-Leste"
+    },
+    "countryiso3code": "TLS",
+    "date": "2025",
+    "value": 1902180257.82737,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TL",
+      "value": "Timor-Leste"
+    },
+    "countryiso3code": "TLS",
+    "date": "2024",
+    "value": 1865608515.41321,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TL",
+      "value": "Timor-Leste"
+    },
+    "countryiso3code": "TLS",
+    "date": "2023",
+    "value": 2079767200,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TL",
+      "value": "Timor-Leste"
+    },
+    "countryiso3code": "TLS",
+    "date": "2022",
+    "value": 3208599900,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TL",
+      "value": "Timor-Leste"
+    },
+    "countryiso3code": "TLS",
+    "date": "2021",
+    "value": 3625024300,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TL",
+      "value": "Timor-Leste"
+    },
+    "countryiso3code": "TLS",
+    "date": "2020",
+    "value": 2162619200,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TL",
+      "value": "Timor-Leste"
+    },
+    "countryiso3code": "TLS",
+    "date": "2019",
+    "value": 2032550400,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TL",
+      "value": "Timor-Leste"
+    },
+    "countryiso3code": "TLS",
+    "date": "2018",
+    "value": 1555988600,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TL",
+      "value": "Timor-Leste"
+    },
+    "countryiso3code": "TLS",
+    "date": "2017",
+    "value": 1584878400,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TL",
+      "value": "Timor-Leste"
+    },
+    "countryiso3code": "TLS",
+    "date": "2016",
+    "value": 1640464600,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TL",
+      "value": "Timor-Leste"
+    },
+    "countryiso3code": "TLS",
+    "date": "2015",
+    "value": 1590282400,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TL",
+      "value": "Timor-Leste"
+    },
+    "countryiso3code": "TLS",
+    "date": "2014",
+    "value": 1447535200,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TL",
+      "value": "Timor-Leste"
+    },
+    "countryiso3code": "TLS",
+    "date": "2013",
+    "value": 1395727400,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TL",
+      "value": "Timor-Leste"
+    },
+    "countryiso3code": "TLS",
+    "date": "2012",
+    "value": 1160555000,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TL",
+      "value": "Timor-Leste"
+    },
+    "countryiso3code": "TLS",
+    "date": "2011",
+    "value": 1042534600,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "TL",
+      "value": "Timor-Leste"
+    },
+    "countryiso3code": "TLS",
+    "date": "2010",
+    "value": 881909300,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "VN",
+      "value": "Viet Nam"
+    },
+    "countryiso3code": "VNM",
+    "date": "2025",
+    "value": 514697215165.065,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "VN",
+      "value": "Viet Nam"
+    },
+    "countryiso3code": "VNM",
+    "date": "2024",
+    "value": 476324572783.807,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "VN",
+      "value": "Viet Nam"
+    },
+    "countryiso3code": "VNM",
+    "date": "2023",
+    "value": 433805036898.465,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "VN",
+      "value": "Viet Nam"
+    },
+    "countryiso3code": "VNM",
+    "date": "2022",
+    "value": 413445230668.578,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "VN",
+      "value": "Viet Nam"
+    },
+    "countryiso3code": "VNM",
+    "date": "2021",
+    "value": 366474752771.009,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "VN",
+      "value": "Viet Nam"
+    },
+    "countryiso3code": "VNM",
+    "date": "2020",
+    "value": 346615738537.796,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "VN",
+      "value": "Viet Nam"
+    },
+    "countryiso3code": "VNM",
+    "date": "2019",
+    "value": 334365270496.667,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "VN",
+      "value": "Viet Nam"
+    },
+    "countryiso3code": "VNM",
+    "date": "2018",
+    "value": 310106478394.659,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "VN",
+      "value": "Viet Nam"
+    },
+    "countryiso3code": "VNM",
+    "date": "2017",
+    "value": 281353605986.903,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "VN",
+      "value": "Viet Nam"
+    },
+    "countryiso3code": "VNM",
+    "date": "2016",
+    "value": 257096001177.982,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "VN",
+      "value": "Viet Nam"
+    },
+    "countryiso3code": "VNM",
+    "date": "2015",
+    "value": 239258328381.741,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "VN",
+      "value": "Viet Nam"
+    },
+    "countryiso3code": "VNM",
+    "date": "2014",
+    "value": 233451469642.519,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "VN",
+      "value": "Viet Nam"
+    },
+    "countryiso3code": "VNM",
+    "date": "2013",
+    "value": 213708811665.34,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "VN",
+      "value": "Viet Nam"
+    },
+    "countryiso3code": "VNM",
+    "date": "2012",
+    "value": 195590661129.249,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "VN",
+      "value": "Viet Nam"
+    },
+    "countryiso3code": "VNM",
+    "date": "2011",
+    "value": 172595049183.925,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  },
+  {
+    "indicator": {
+      "id": "NY.GDP.MKTP.CD",
+      "value": "GDP (current US$)"
+    },
+    "country": {
+      "id": "VN",
+      "value": "Viet Nam"
+    },
+    "countryiso3code": "VNM",
+    "date": "2010",
+    "value": 147201173196.979,
+    "unit": "",
+    "obs_status": "",
+    "decimal": 0
+  }
+]

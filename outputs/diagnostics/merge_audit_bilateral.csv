@@ -1,0 +1,14 @@
+variable,non_null_count,missing_count,zero_count,completeness_pct
+exporter_iso3,3240,0,0,100.0
+importer_iso3,3240,0,0,100.0
+year,3240,0,0,100.0
+trade_usd,3240,0,168,100.0
+lsbci,3105,135,0,95.83
+product_group,3240,0,0,100.0
+pair_id,3240,0,0,100.0
+exporter_year,3240,0,0,100.0
+importer_year,3240,0,0,100.0
+ln_lsbci,3105,135,0,95.83
+source_flag,3240,0,0,100.0
+exporter_lsci,3240,0,0,100.0
+ln_exporter_lsci,3240,0,0,100.0

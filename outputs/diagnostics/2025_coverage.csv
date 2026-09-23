@@ -1,0 +1,8 @@
+variable,non_null_count,total_countries,coverage_pct,status_rule_80pct
+export_usd,9,9,100.0,ĐẠT
+lsci,9,9,100.0,ĐẠT
+gdp_usd,9,9,100.0,ĐẠT
+population,9,9,100.0,ĐẠT
+fdi_gdp,6,9,66.7,KHÔNG ĐẠT
+reer,3,9,33.3,KHÔNG ĐẠT
+official_fx,7,9,77.8,KHÔNG ĐẠT

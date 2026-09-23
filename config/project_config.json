@@ -1,0 +1,10 @@
+{
+  "start_year": 2010,
+  "end_year": 2025,
+  "min_quarters_per_year": 3,
+  "min_2025_coverage": 0.8,
+  "main_trade_source": "ASEANstats",
+  "bilateral_trade_source": "UNComtrade",
+  "cluster_variable": "iso3",
+  "exclude_countries_main": ["LAO", "TLS"]
+}

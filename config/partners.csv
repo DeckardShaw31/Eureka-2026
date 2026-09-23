@@ -1,0 +1,26 @@
+iso3,country,un_code,is_asean
+BRN,Brunei Darussalam,96,1
+KHM,Cambodia,116,1
+IDN,Indonesia,360,1
+LAO,Lao PDR,418,1
+MYS,Malaysia,458,1
+MMR,Myanmar,104,1
+PHL,Philippines,608,1
+SGP,Singapore,702,1
+THA,Thailand,764,1
+VNM,Viet Nam,704,1
+USA,United States,842,0
+CHN,China,156,0
+JPN,Japan,392,0
+KOR,Republic of Korea,410,0
+HKG,Hong Kong,344,0
+DEU,Germany,276,0
+NLD,Netherlands,528,0
+GBR,United Kingdom,826,0
+AUS,Australia,36,0
+IND,India,699,0
+TWN,Other Asia nes (Taiwan),490,0
+FRA,France,250,0
+ITA,Italy,380,0
+CAN,Canada,124,0
+ARE,United Arab Emirates,784,0

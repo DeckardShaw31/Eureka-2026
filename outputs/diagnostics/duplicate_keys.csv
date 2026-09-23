@@ -1,0 +1,3 @@
+dataset,keys,duplicates
+panel_country_year,"iso3, year",0
+panel_bilateral_year,"exporter, importer, year, product",0

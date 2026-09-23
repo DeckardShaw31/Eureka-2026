@@ -1,0 +1,30 @@
+# Python & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Archives
+*.7z
+*.zip
+*.tar
+*.gz
+
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# Large raw datasets (>50MB, documented with URLs and SHA-256 in data/raw/manifest.csv)
+data/raw/aseanstats/asean_imts_annual_hs4.csv
+data/raw/aseanstats/asean_imts_annual_hs6.csv
+data/raw/aseanstats/asean_imts_annual_hs8.csv
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
