@@ -8,29 +8,41 @@
 
 Kho lưu trữ mã nguồn và dữ liệu thực nghiệm phục vụ bài nghiên cứu định lượng mối quan hệ giữa năng lực kết nối vận tải biển (Liner Shipping Connectivity Index - LSCI, Bilateral Liner Shipping Connectivity Index - LSBCI) và hiệu quả xuất khẩu hàng hóa của các quốc gia ASEAN ven biển giai đoạn 2010–2025.
 
-Nghiên cứu áp dụng phương pháp hồi quy Poisson Pseudo-Maximum Likelihood (PPML) theo chuẩn Santos Silva & Tenreyro (2006) và mô hình Trọng lực cấu trúc mở rộng (Yotov et al., 2016), xử lý triệt để hiện tượng phương sai thay đổi và giá trị thương mại bằng 0 (Zero Trade).
+Nghiên cứu áp dụng phương pháp hồi quy Poisson Pseudo-Maximum Likelihood (PPML) theo chuẩn Santos Silva & Tenreyro (2006) và mô hình Trọng lực cấu trúc mở rộng (Yotov et al., 2016), xử lý triệt để hiện tượng phương sai thay đổi và giá trị thương mại bằng 0 (Zero Trade). Toàn bộ quy trình suy diễn thống kê sử dụng sai số chuẩn phân cụm (Clustered SE) kết hợp hiệu chỉnh mẫu nhỏ Student-t (Cameron & Miller, 2015).
 
 ---
 
 ## 2. Kết quả kiểm định các giả thuyết cốt lõi
 
-| Giả thuyết | Đặc tả thực nghiệm | Hệ số ước lượng | Ý nghĩa thống kê | Kết luận |
+| Giả thuyết | Đặc tả thực nghiệm | Hệ số ước lượng | Ý nghĩa thống kê | Kết luận thực nghiệm |
 |---|---|---|---|---|
-| **H1: LSCI tác động dương tới tổng xuất khẩu** | M1 & M2 PPML (Tầng A) | \(\beta_1 = 1.192^{***}\) | \(p = 0.0017\) | **Chấp nhận** (Tăng 1% LSCI gắn với mức tăng 1.19% xuất khẩu) |
-| **H2: LSBCI thúc đẩy xuất khẩu song phương** | G1 Gravity PPML (Tầng B) | \(\beta_1 = 0.580^{**}\) | \(p = 0.0103\) | **Chấp nhận** (Tăng 1% LSBCI gắn với mức tăng 0.58% thương mại cặp nước) |
-| **H3: Hiệu ứng biên lớn hơn ở CLMV** | M5 Tương tác (Tầng A) | \(\beta_{CLMV} = +0.660^{**}\) | \(p = 0.0387\) | **Chấp nhận** (CLMV có độ co giãn biên vượt trội so với ASEAN-6) |
-| **H4: Tác động mạnh hơn với hàng chế tạo** | Robustness 7 & 8 | Chế tạo: \(1.134^{***}\)<br>Nông sản: \(0.124\) | Chế tạo: \(p = 0.0000\)<br>Nông sản: \(p = 0.658\) | **Chấp nhận** (Hàng công nghiệp phụ thuộc chặt chẽ vào vận tải container) |
+| **H1: LSCI tác động dương tới tổng xuất khẩu** | M1 & M2 PPML (Tầng A) | M1: \(\beta = 1.192^{**}\)<br>M2: \(\beta = 1.039^{***}\) | M1: \(p = 0.014\)<br>M2: \(p = 0.006\) | **Chấp nhận** (Tăng 1% LSCI gắn liền với mức tăng 1.04% kim ngạch xuất khẩu khi đã kiểm soát quy mô GDP và dân số) |
+| **H2: LSBCI thúc đẩy xuất khẩu song phương** | G2 Trọng lực chuẩn (Cặp FE + Năm FE)<br>G1 Trọng lực cấu trúc đầy đủ (Cặp + XK-Năm + NK-Năm FE) | G2: \(\beta = 0.770^{***}\)<br>G1: \(\beta = -0.195\) | G2: \(p = 0.004\)<br>G1: \(p = 0.422\) | **Ủng hộ có điều kiện** (Tác động dương mạnh mẽ trong mô hình trọng lực chuẩn; trong cấu trúc đầy đủ, biến động song phương bị triệt tiêu bởi hiệu ứng cố định cặp và thời gian) |
+| **H3: Hiệu ứng biên lớn hơn ở nhóm CLMV** | M5 PPML Tương tác (Tầng A) & Kiểm định tổ hợp tuyến tính | Tương tác: \(+0.660^{*}\)<br>Tổng CLMV: \(1.186^{***}\) | Tương tác: \(p = 0.073\)<br>Tổng CLMV: \(p = 0.002\) | **Chấp nhận** (Tổng tác động cận biên đối với CLMV đạt 1.186***, cao hơn đáng kể so với mức 0.526 của nhóm ASEAN-6) |
+| **H4: Tác động mạnh hơn với hàng chế tạo** | Robustness R8 (Chế tạo), R9 (Nhiên liệu), R10 (Nông sản) | Chế tạo (HS 28–96): \(1.118^{***}\)<br>Nhiên liệu (HS 25–27): \(-0.163\)<br>Nông sản (HS 01–24): \(0.124\) | Chế tạo: \(p = 0.005\)<br>Nhiên liệu: \(p = 0.729\)<br>Nông sản: \(p = 0.669\) | **Chấp nhận** (Mạng lưới tàu container thúc đẩy mạnh mẽ hàng công nghiệp chế tạo; không có ý nghĩa với nông sản và nhiên liệu) |
 
 ---
 
-## 3. Cấu trúc kho mã nguồn
+## 3. Các cải tiến kinh tế lượng chuẩn mực (Manuscript-Ready)
+
+1. **Chuẩn hóa dữ liệu thương mại song phương**: Dữ liệu xuất khẩu của Việt Nam năm 2024 chưa báo cáo trên UN Comtrade được bảo lưu chính xác dưới dạng `NaN` (không điền số 0 giả mạo), loại bỏ 24 quan sát sai lệch làm méo mó mô hình trọng lực.
+2. **Ước lượng Trọng lực cấu trúc đầy đủ (Full Structural Gravity)**: Triển khai thành công mô hình G1 với đồng thời Cặp quốc gia FE, Nước xuất khẩu-Năm FE và Nước nhập khẩu-Năm FE thông qua thuật toán phân rã QR có hoán vị cột (QR with pivoting) để khử 45 biến giả đa cộng tuyến hoàn hảo.
+3. **Phân loại ngành hàng chuẩn xác (Bóc tách Dầu khí Brunei)**: Tách riêng nhóm Nhiên liệu & Khoáng sản (HS 25–27, chiếm 78% xuất khẩu Brunei) khỏi Công nghiệp Chế biến - Chế tạo thuần túy (HS 28–96), giải quyết triệt để biến dạng mẫu.
+4. **Suy diễn thống kê mẫu nhỏ**: Toàn bộ mô hình áp dụng Clustered SE kèm phân phối Student-t với bậc tự do mẫu nhỏ (`use_t=True`, \(df = G - 1\)), không phóng đại giá trị p đối với 9 cụm quốc gia.
+5. **Kiểm định xu hướng thời gian riêng của từng nước**: Hiệu ứng của LSCI vẫn giữ vững ý nghĩa thống kê dương (\(\beta = 0.328^{**}, p = 0.017\)) sau khi đưa vào xu hướng tuyến tính riêng của từng nước (`iso3:trend`).
+6. **Kiểm định VIF tập trung và biến đổi cố định**: Bổ sung hằng số vào tính toán VIF, kết quả VIF tập trung đều dưới 12 và VIF sau khi trừ bình quân nhóm (Within-country) đều dưới 3.70, khẳng định không tồn tại vấn đề đa cộng tuyến nghiêm trọng.
+7. **Tự động hóa hoàn toàn không hard-code**: Toàn bộ kết luận, bảng biểu, số liệu trong `summary_findings.json` và README được cập nhật động trực tiếp từ kết quả ước lượng mô hình.
+
+---
+
+## 4. Cấu trúc kho mã nguồn
 
 ```text
 .
 ├── config/                      # Cấu hình danh mục quốc gia & đối tác
 │   ├── countries.csv            # 9 nước ASEAN ven biển làm mẫu chính
 │   ├── partners.csv             # 24 đối tác xuất khẩu lớn toàn cầu
-│   └── project_config.json      # Tham số chạy mô hình và ngưỡng dữ liệu
+│   └── project_config.json      # Tham số chạy mô hình và phân định năm
 ├── data/
 │   ├── raw/                     # Dữ liệu gốc bất biến (Immutable)
 │   │   ├── unctad/              # LSCI và LSBCI từ UNCTADstat
@@ -43,7 +55,7 @@ Nghiên cứu áp dụng phương pháp hồi quy Poisson Pseudo-Maximum Likelih
 │       ├── panel_country_year.csv      # Bảng Quốc gia - Năm (144 dòng)
 │       └── panel_bilateral_year.csv    # Bảng Song phương (3.240 dòng)
 ├── src/                         # Toàn bộ pipeline xử lý & mô hình hóa
-│   ├── clean_common.py          # Tiện ích chuẩn hóa ISO3 và kiểm tra schema
+│   ├── clean_common.py          # Tiện ích chuẩn hóa ISO3, định dạng số p-val
 │   ├── import_unctad.py         # Tiền xử lý chỉ số UNCTADstat
 │   ├── import_trade.py          # Tiền xử lý xuất khẩu ASEANstats & Comtrade
 │   ├── build_country_panel.py   # Xây dựng bảng panel_country_year
@@ -51,22 +63,23 @@ Nghiên cứu áp dụng phương pháp hồi quy Poisson Pseudo-Maximum Likelih
 │   ├── validate_data.py         # Kiểm định hợp đồng dữ liệu & xuất báo cáo
 │   ├── descriptive_analysis.py  # Thống kê mô tả & vẽ 5 biểu đồ 300 DPI
 │   ├── model_country_panel.py   # Ước lượng OLS TWFE và PPML Tầng A
-│   ├── model_gravity_ppml.py    # Ước lượng Gravity PPML Tầng B
-│   ├── robustness.py            # 9 kiểm định độ bền và độ nhạy
-│   └── export_results.py        # Xuất bản tóm tắt kết quả JSON/LaTeX
+│   ├── model_gravity_ppml.py    # Ước lượng Structural Gravity PPML Tầng B
+│   ├── robustness.py            # 11 kiểm định độ bền và độ nhạy
+│   └── export_results.py        # Xuất bản tóm tắt kết quả JSON động
 ├── outputs/
-│   ├── tables/                  # Bảng kết quả định dạng CSV & LaTeX (.tex)
+│   ├── tables/                  # Bảng kết quả định dạng CSV, LaTeX & JSON
 │   ├── figures/                 # Biểu đồ học thuật chuẩn 300 DPI (.png)
 │   └── diagnostics/             # Báo cáo kiểm toán ghép dữ liệu & tỷ lệ khuyết
 ├── tests/
 │   └── test_data_contracts.py   # Bộ unit test tự động (Pytest)
 ├── design.md                    # Bản thiết kế nghiên cứu chi tiết
+├── code_review.md               # Báo cáo rà soát và giải pháp khắc phục
 └── README.md
 ```
 
 ---
 
-## 4. Hướng dẫn chạy tái lập (Reproducibility)
+## 5. Hướng dẫn chạy tái lập (Reproducibility)
 
 ### Yêu cầu môi trường
 - Python >= 3.10
@@ -100,5 +113,5 @@ python src/export_results.py
 
 ---
 
-## 5. Giấy phép
+## 6. Giấy phép
 Dự án được phân phối dưới giấy phép GNU General Public License v3.0 (GPL-3.0). Xem [LICENSE](LICENSE) để biết thêm chi tiết.

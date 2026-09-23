@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import statsmodels.api as sm
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 from clean_common import ensure_directories
 
@@ -22,13 +23,15 @@ def compute_descriptive_stats(df_country, df_bilateral):
     """Tính bảng thống kê mô tả cho dữ liệu quốc gia và dữ liệu song phương (2010-2024)"""
     print("[DESCRIPTIVE] Tính toán bảng thống kê mô tả...")
     c_sample = df_country[df_country['year'] <= 2024].copy()
-    b_sample = df_bilateral[df_bilateral['year'] <= 2024].copy()
+    # Với bảng song phương, chỉ tính trên các quan sát hợp lệ (loại trừ VNM 2024 chưa báo cáo)
+    b_sample = df_bilateral[(df_bilateral['year'] <= 2024) & (df_bilateral['trade_usd'].notnull())].copy()
     
     # Biến đổi đơn vị để bảng số liệu dễ đọc trong bài báo
     stats_data = [
         {'Variable': 'Tổng xuất khẩu (tỷ USD)', 'Series': c_sample['export_usd'] / 1e9},
-        {'Variable': 'Xuất khẩu Nông-Thủy sản (tỷ USD)', 'Series': c_sample['export_usd_agri'] / 1e9},
-        {'Variable': 'Xuất khẩu Chế biến-Chế tạo (tỷ USD)', 'Series': c_sample['export_usd_mfg'] / 1e9},
+        {'Variable': 'Xuất khẩu Nông-Thủy sản HS 01-24 (tỷ USD)', 'Series': c_sample['export_usd_agri'] / 1e9},
+        {'Variable': 'Xuất khẩu Nhiên liệu-Khoáng sản HS 25-27 (tỷ USD)', 'Series': c_sample['export_usd_fuels'] / 1e9},
+        {'Variable': 'Xuất khẩu Công nghiệp chế tạo HS 28-96 (tỷ USD)', 'Series': c_sample['export_usd_mfg'] / 1e9},
         {'Variable': 'Chỉ số LSCI', 'Series': c_sample['lsci']},
         {'Variable': 'GDP hiện hành (tỷ USD)', 'Series': c_sample['gdp_usd'] / 1e9},
         {'Variable': 'Dân số (triệu người)', 'Series': c_sample['population'] / 1e6},
@@ -68,27 +71,40 @@ def compute_descriptive_stats(df_country, df_bilateral):
     return df_desc
 
 def compute_correlation_and_vif(df_country):
-    """Tính ma trận tương quan và kiểm tra hệ số phóng đại phương sai (VIF)"""
+    """Tính ma trận tương quan và kiểm tra hệ số phóng đại phương sai (VIF) chuẩn có hằng số và Within-country"""
     print("[DESCRIPTIVE] Tính ma trận tương quan và kiểm định đa cộng tuyến (VIF)...")
     c_sample = df_country[df_country['year'] <= 2024].dropna(subset=['ln_lsci', 'ln_gdp', 'ln_population', 'fdi_gdp']).copy()
     
     vars_list = ['ln_lsci', 'ln_gdp', 'ln_population', 'fdi_gdp']
     corr_matrix = c_sample[vars_list].corr().round(3)
     
-    # Tính VIF
-    X = c_sample[vars_list]
-    vif_data = []
+    # 1. Tính VIF chuẩn có thêm hằng số (add_constant)
+    X = sm.add_constant(c_sample[vars_list])
+    vifs_standard = []
     for i, col in enumerate(vars_list):
-        v = variance_inflation_factor(X.values, i)
-        vif_data.append(round(v, 2))
+        # Index col trong X dịch 1 vị trí do có Intercept
+        v = variance_inflation_factor(X.values, i + 1)
+        vifs_standard.append(round(v, 2))
+    corr_matrix['VIF (Centered)'] = vifs_standard
     
-    corr_matrix['VIF'] = vif_data
+    # 2. Tính Within-country VIF (sau khi trừ trung bình theo quốc gia để phản ánh đúng mô hình Fixed Effects)
+    c_demeaned = c_sample.copy()
+    for v in vars_list:
+        c_demeaned[v] = c_demeaned[v] - c_demeaned.groupby('iso3')[v].transform('mean')
+    X_dm = sm.add_constant(c_demeaned[vars_list])
+    vifs_within = []
+    for i, col in enumerate(vars_list):
+        v = variance_inflation_factor(X_dm.values, i + 1)
+        vifs_within.append(round(v, 2))
+    corr_matrix['Within-Country VIF'] = vifs_within
+    
     csv_file = os.path.join(TABLES_DIR, 'table_correlation_vif.csv')
     tex_file = os.path.join(TABLES_DIR, 'table_correlation_vif.tex')
     corr_matrix.to_csv(csv_file)
-    corr_matrix.to_latex(tex_file, caption='Ma trận tương quan và hệ số phóng đại phương sai (VIF)', label='tab:corr_vif')
-    print(f"  ✓ Đã lưu ma trận tương quan và VIF: {csv_file}")
+    corr_matrix.to_latex(tex_file, caption='Ma trận tương quan và hệ số phóng đại phương sai chuẩn và nội bộ quốc gia (VIF)', label='tab:corr_vif')
+    print(f"  ✓ Đã lưu ma trận tương quan và VIF (có hằng số & within-country): {csv_file}")
     return corr_matrix
+
 
 def generate_visualizations(df_country, df_bilateral):
     """Tạo bộ 5 hình trực quan hóa chất lượng cao theo Mục 12 của design.md"""
@@ -162,6 +178,7 @@ def generate_visualizations(df_country, df_bilateral):
     plt.figure(figsize=(9, 5), dpi=300)
     order_periods = ['2010–2019 (Tiền COVID)', '2020–2021 (COVID-19)', '2022–2024 (Hậu COVID)']
     sns.boxplot(data=c_sample, x='period', y='export_usd_billions', order=order_periods,
+                hue='period', legend=False,
                 palette=['#a1c9f4', '#ffb3ba', '#baffc9'], showmeans=True,
                 meanprops={"marker":"o", "markerfacecolor":"red", "markeredgecolor":"red"})
     plt.title('Kim ngạch xuất khẩu trung bình qua các giai đoạn COVID-19', fontsize=12, pad=12, fontweight='bold')

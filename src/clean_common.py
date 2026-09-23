@@ -99,6 +99,44 @@ def compute_file_sha256(filepath):
             hasher.update(chunk)
     return hasher.hexdigest()
 
+def load_project_config():
+    """Tải cấu hình dự án từ config/project_config.json làm nguồn chuẩn duy nhất"""
+    cfg_path = os.path.join(CONFIG_DIR, 'project_config.json')
+    if os.path.exists(cfg_path):
+        import json
+        with open(cfg_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return {
+        'start_year': 2010,
+        'end_year': 2025,
+        'estimation_end_year': 2024,
+        'descriptive_end_year': 2025,
+        'min_quarters_per_year': 3,
+        'min_2025_coverage': 0.8
+    }
+
+def format_pval(pval):
+    """Định dạng p-value chuẩn học thuật (không bao giờ in p = 0.0000)"""
+    if pd.isnull(pval):
+        return ""
+    if pval < 0.001:
+        return "< 0.001"
+    return f"{pval:.3f}"
+
+def format_coef_se(coef, se, pval):
+    """Định dạng hệ số kèm dấu sao ý nghĩa thống kê và sai số chuẩn"""
+    if pd.isnull(coef):
+        return ""
+    stars = ''
+    if pval < 0.01:
+        stars = '***'
+    elif pval < 0.05:
+        stars = '**'
+    elif pval < 0.1:
+        stars = '*'
+    se_str = f"({se:.3f})" if not pd.isnull(se) else ""
+    return f"{coef:.3f}{stars}\n{se_str}".strip()
+
 def ensure_directories():
     """Đảm bảo các thư mục cần thiết trong dự án tồn tại"""
     dirs = [
@@ -112,3 +150,4 @@ def ensure_directories():
     ]
     for d in dirs:
         os.makedirs(d, exist_ok=True)
+

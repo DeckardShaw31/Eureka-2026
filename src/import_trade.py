@@ -22,8 +22,9 @@ def process_aseanstats_exports(start_year=2010, end_year=2025):
     Xử lý xuất khẩu từ ASEANstats HS2:
     - Tổng xuất khẩu (TOTAL): tổng giá trị các chương HS 01-97
     - Nông sản thực phẩm (agri_food): HS 01-24
-    - Hàng chế tạo chế biến (manufacturing): HS 25-97
-    - Lưu ý: Dữ liệu tiền tệ gốc là USD
+    - Nhiên liệu & Khoáng sản (fuels_mining): HS 25-27 (Tách riêng dầu thô, khí đốt, quặng để tránh bóp méo Brunei)
+    - Hàng chế tạo chế biến chuẩn (manufacturing): HS 28-96
+    - Hàng phi nông nghiệp (non_agri): HS 25-97
     """
     hs2_file = os.path.join(RAW_ASEAN_DIR, 'asean_imts_annual_hs2.csv')
     if not os.path.exists(hs2_file):
@@ -49,14 +50,18 @@ def process_aseanstats_exports(start_year=2010, end_year=2025):
     for (iso, yr), group in df_exp.groupby(['iso3', 'year']):
         val_total = group['trade_usd'].sum()
         val_agri = group[group['hs2'].between(1, 24)]['trade_usd'].sum()
-        val_mfg = group[group['hs2'].between(25, 97)]['trade_usd'].sum()
+        val_fuels = group[group['hs2'].between(25, 27)]['trade_usd'].sum()
+        val_mfg = group[group['hs2'].between(28, 96)]['trade_usd'].sum()
+        val_non_agri = group[group['hs2'].between(25, 97)]['trade_usd'].sum()
         
         records.append({
             'iso3': iso,
             'year': int(yr),
             'export_usd': float(val_total),
             'export_usd_agri': float(val_agri),
+            'export_usd_fuels': float(val_fuels),
             'export_usd_mfg': float(val_mfg),
+            'export_usd_non_agri': float(val_non_agri),
             'trade_source': 'ASEANstats'
         })
         
@@ -70,7 +75,7 @@ def process_comtrade_bilateral(start_year=2010, end_year=2024):
     """
     Xử lý xuất khẩu song phương từ UN Comtrade:
     - 9 nước xuất khẩu ASEAN x 24 đối tác lớn
-    - Lưu trữ giá trị xuất khẩu song phương theo từng cặp và năm
+    - Lưu ý kiểm toán reporter-year: phát hiện chính xác năm nào có dữ liệu báo cáo
     """
     comtrade_file = os.path.join(RAW_COMTRADE_DIR, 'comtrade_bilateral_2010_2024.csv')
     if not os.path.exists(comtrade_file):
@@ -82,16 +87,38 @@ def process_comtrade_bilateral(start_year=2010, end_year=2024):
     # Đảm bảo các kiểu dữ liệu và lọc thời gian
     df['year'] = df['year'].astype(int)
     df = df[(df['year'] >= start_year) & (df['year'] <= end_year)].copy()
-    df['trade_usd'] = pd.to_numeric(df['trade_usd'], errors='coerce').fillna(0.0)
+    df['trade_usd'] = pd.to_numeric(df['trade_usd'], errors='coerce')
     
     # Gom nhóm chống trùng lặp
     agg_df = df.groupby(['exporter_iso3', 'importer_iso3', 'year'])['trade_usd'].max().reset_index()
     agg_df['source_flag'] = 'UNComtrade'
     
+    # Tạo bảng kiểm toán độ phủ reporter-year
+    rep_records = []
+    for exp_iso in CORE_ASEAN_COASTAL:
+        for yr in range(start_year, end_year + 1):
+            sub = agg_df[(agg_df['exporter_iso3'] == exp_iso) & (agg_df['year'] == yr)]
+            n_partners = len(sub)
+            tot_val = sub['trade_usd'].sum() if n_partners > 0 else 0.0
+            is_complete = 1 if n_partners >= 15 else 0
+            rep_records.append({
+                'exporter_iso3': exp_iso,
+                'year': yr,
+                'partners_reported': n_partners,
+                'total_trade_usd': tot_val,
+                'reporter_year_complete': is_complete,
+                'status': 'REPORTED' if is_complete == 1 else 'UNREPORTED_BY_COMTRADE'
+            })
+    df_rep = pd.DataFrame(rep_records)
+    rep_file = os.path.join(INTERIM_DIR, 'comtrade_reporter_coverage.csv')
+    df_rep.to_csv(rep_file, index=False)
+    print(f"[UN Comtrade] Đã lưu bảng kiểm toán độ phủ reporter-year vào {rep_file}")
+    
     out_file = os.path.join(INTERIM_DIR, 'comtrade_bilateral_annual.csv')
     agg_df.to_csv(out_file, index=False)
     print(f"[UN Comtrade] Đã lưu {len(agg_df)} bản ghi thương mại song phương vào {out_file}")
     return agg_df
+
 
 if __name__ == '__main__':
     ensure_directories()

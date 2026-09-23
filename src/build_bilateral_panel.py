@@ -35,21 +35,56 @@ def build_bilateral_panel(start_year=2010, end_year=2024):
     panel = pd.DataFrame(grid_rows)
     print(f"Tổng số quan sát cặp nước - năm trong lưới vuông lý thuyết: {len(panel)} dòng.")
     
-    print("=== [BƯỚC 2] Ghép dòng xuất khẩu song phương từ UN Comtrade ===")
+    print("=== [BƯỚC 2] Ghép dòng xuất khẩu song phương từ UN Comtrade & Kiểm toán trạng thái ===")
     ct_file = os.path.join(INTERIM_DIR, 'comtrade_bilateral_annual.csv')
     df_ct = pd.read_csv(ct_file)
     
+    rep_file = os.path.join(INTERIM_DIR, 'comtrade_reporter_coverage.csv')
+    df_rep = pd.read_csv(rep_file) if os.path.exists(rep_file) else pd.DataFrame()
+    
     panel = panel.merge(
-        df_ct[['exporter_iso3', 'importer_iso3', 'year', 'trade_usd', 'source_flag']],
+        df_ct[['exporter_iso3', 'importer_iso3', 'year', 'trade_usd', 'source_flag']].rename(columns={'trade_usd': 'trade_usd_raw'}),
         on=['exporter_iso3', 'importer_iso3', 'year'],
         how='left'
     )
     
-    # Quy tắc bắt buộc của PPML: Giữ nguyên quan sát thương mại bằng 0 (không xóa, không chuyển thành NaN)
-    zero_trade_count = panel['trade_usd'].isnull().sum()
-    panel['trade_usd'] = panel['trade_usd'].fillna(0.0)
-    panel['source_flag'] = panel['source_flag'].fillna('UNComtrade (Zero Trade)')
-    print(f"Số cặp có giao dịch dương: {len(panel) - zero_trade_count}, số cặp không có thương mại (Trade = 0): {zero_trade_count}")
+    if not df_rep.empty:
+        panel = panel.merge(
+            df_rep[['exporter_iso3', 'year', 'reporter_year_complete']],
+            on=['exporter_iso3', 'year'],
+            how='left'
+        )
+    else:
+        panel['reporter_year_complete'] = 1
+        
+    # Phân loại chính xác 3 trạng thái dữ liệu:
+    # 1. Có số liệu thương mại dương (trade_observed = 1)
+    # 2. Số liệu bằng 0 thực tế đã xác nhận (zero_trade_confirmed = 1) khi quốc gia có báo cáo đầy đủ
+    # 3. Bản ghi chưa báo cáo / khuyết (unreported_reporter_year) -> GIỮ NGUYÊN NaN, KHÔNG ĐIỀN 0
+    panel['trade_observed'] = np.where(panel['trade_usd_raw'] > 0, 1, 0)
+    panel['zero_trade_confirmed'] = np.where((panel['reporter_year_complete'] == 1) & (panel['trade_usd_raw'].isnull()), 1, 0)
+    
+    # Thiết lập biến trade_usd dùng cho PPML:
+    # Chỉ điền 0.0 nếu quốc gia CÓ BÁO CÁO (reporter_year_complete == 1)
+    panel['trade_usd'] = np.where(
+        panel['trade_observed'] == 1,
+        panel['trade_usd_raw'],
+        np.where(panel['zero_trade_confirmed'] == 1, 0.0, np.nan)
+    )
+    
+    panel['missing_reason'] = None
+    panel.loc[panel['reporter_year_complete'] == 0, 'missing_reason'] = 'unreported_reporter_year_in_comtrade'
+    
+    panel['source_flag'] = 'UNComtrade'
+    panel.loc[panel['zero_trade_confirmed'] == 1, 'source_flag'] = 'UNComtrade (Confirmed Zero)'
+    panel.loc[panel['reporter_year_complete'] == 0, 'source_flag'] = 'UNComtrade (Unreported)'
+
+    
+    n_pos = (panel['trade_observed'] == 1).sum()
+    n_zero = (panel['zero_trade_confirmed'] == 1).sum()
+    n_miss = panel['trade_usd'].isnull().sum()
+    print(f"Kiểm toán thương mại: {n_pos} cặp dương, {n_zero} cặp bằng 0 xác nhận, {n_miss} cặp chưa báo cáo (được bảo toàn NaN để không làm sai lệch PPML).")
+
     
     print("=== [BƯỚC 3] Ghép chỉ số kết nối vận tải biển song phương LSBCI ===")
     lsbci_file = os.path.join(INTERIM_DIR, 'unctad_lsbci_annual.csv')
@@ -71,13 +106,15 @@ def build_bilateral_panel(start_year=2010, end_year=2024):
     )
     panel['ln_exporter_lsci'] = np.where(panel['exporter_lsci'] > 0, np.log(panel['exporter_lsci']), np.nan)
     
-    # Sắp xếp các cột theo đúng chuẩn Mục 6.2
+    # Sắp xếp các cột theo đúng chuẩn Mục 6.2 và các trường kiểm toán trạng thái dữ liệu
     ordered_cols = [
-        'exporter_iso3', 'importer_iso3', 'year', 'trade_usd', 'lsbci',
-        'product_group', 'pair_id', 'exporter_year', 'importer_year',
+        'exporter_iso3', 'importer_iso3', 'year', 'trade_usd', 'trade_usd_raw',
+        'trade_observed', 'zero_trade_confirmed', 'reporter_year_complete', 'missing_reason',
+        'lsbci', 'product_group', 'pair_id', 'exporter_year', 'importer_year',
         'ln_lsbci', 'source_flag', 'exporter_lsci', 'ln_exporter_lsci'
     ]
     panel = panel[ordered_cols].sort_values(['exporter_iso3', 'importer_iso3', 'year']).reset_index(drop=True)
+
     
     out_file = os.path.join(PROCESSED_DIR, 'panel_bilateral_year.csv')
     panel.to_csv(out_file, index=False)

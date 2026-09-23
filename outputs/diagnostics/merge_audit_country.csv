@@ -19,10 +19,14 @@ ln_population,144,0,100.0
 ln_lsci_lag1,135,9,93.75
 data_complete,144,0,100.0
 export_usd_agri,144,0,100.0
+export_usd_fuels,144,0,100.0
 export_usd_mfg,144,0,100.0
+export_usd_non_agri,144,0,100.0
 ln_export_agri,144,0,100.0
+ln_export_fuels,144,0,100.0
 ln_export_mfg,144,0,100.0
+ln_export_non_agri,144,0,100.0
 lsci_lag1,135,9,93.75
-fx_growth,135,9,93.75
+fx_growth,129,15,89.58
 lsci_quarters,144,0,100.0
 lsci_partial_year,144,0,100.0

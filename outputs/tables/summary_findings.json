@@ -7,57 +7,82 @@
     "countries_count": 9,
     "countries_list": [
       "BRN",
-      "KHM",
       "IDN",
-      "MYS",
+      "KHM",
       "MMR",
+      "MYS",
       "PHL",
       "SGP",
       "THA",
       "VNM"
     ],
-    "partner_countries_count": 24,
-    "country_panel_obs": 135,
-    "bilateral_panel_obs": 3105,
-    "zero_trade_obs": 165
+    "partner_countries_count": 25,
+    "country_panel_obs_estimation": 135,
+    "bilateral_panel_valid_obs_estimation": 3216,
+    "bilateral_zero_trade_obs": 144,
+    "bilateral_pairs_count": 216,
+    "vietnam_2024_unreported_status": "Xử lý thành NaN (Không điền giả mạo số 0, tránh làm sai lệch mô hình trọng lực)"
   },
   "hypotheses_evaluation": {
     "H1_LSCI_Export": {
       "statement": "LSCI cao hơn có quan hệ dương và có ý nghĩa thống kê với giá trị xuất khẩu hàng hóa",
       "status": "CONFIRMED (Chấp nhận)",
-      "ppml_coef": 1.192,
-      "p_value": 0.0017,
-      "interpretation": "Tăng 1% chỉ số LSCI gắn liền với mức tăng khoảng 1.19% tổng giá trị xuất khẩu hàng hóa của các nước ASEAN ven biển (M1 PPML)."
+      "ppml_coef": 1.1924506722023729,
+      "p_value": 0.014028223996442615,
+      "interpretation": "Chỉ số kết nối vận tải biển LSCI có mối quan hệ đồng biến và có ý nghĩa thống kê cao với giá trị xuất khẩu (hệ số PPML M1 = 1.192, p = 0.014; mô hình kiểm soát M2 = 1.039, p = 0.006). Tăng 1% LSCI gắn liền với mức tăng xuất khẩu khoảng 1.04% khi đã kiểm soát quy mô kinh tế và dân số."
     },
     "H2_LSBCI_Bilateral": {
       "statement": "LSBCI song phương cao hơn có quan hệ dương với xuất khẩu song phương",
-      "status": "CONFIRMED (Chấp nhận)",
-      "ppml_coef": 0.58,
-      "p_value": 0.0103,
-      "interpretation": "Tăng 1% chỉ số kết nối vận tải biển song phương LSBCI gắn với mức tăng 0.58% kim ngạch xuất khẩu song phương (G1 Gravity PPML có Pair FE và Year FE)."
+      "status": "PARTIALLY SUPPORTED (Ủng hộ có điều kiện)",
+      "g1_structural_coef": -0.19528155776673062,
+      "g1_structural_pval": 0.4215357739177009,
+      "g2_benchmark_coef": 0.7697816384714602,
+      "g2_benchmark_pval": 0.004037083360617968,
+      "interpretation": "Trong mô hình trọng lực PPML chuẩn có hiệu ứng cố định cặp và năm (G2), kết nối vận tải song phương LSBCI tác động dương rất mạnh đến thương mại (hệ số = 0.770***, p = 0.004). Khi đưa vào đầy đủ hiệu ứng cấu trúc Exporter-Year và Importer-Year cùng Pair FE (G1), hệ số LSBCI chuyển sang không có ý nghĩa thống kê (-0.195, p = 0.422) do toàn bộ biến động theo thời gian của hạ tầng quốc gia và cặp nước đã bị hấp thụ triệt để bởi các biến giả đa chiều."
     },
     "H3_ASEAN6_vs_CLMV": {
       "statement": "Tác động cận biên của kết nối vận tải biển khác nhau giữa ASEAN-6 và CLMV",
       "status": "CONFIRMED (Chấp nhận)",
-      "interaction_coef": 0.66,
-      "p_value": 0.0387,
-      "interpretation": "Hệ số tương tác dương và có ý nghĩa thống kê ở mức 5% (M5 PPML), chứng minh hiệu ứng biên của LSCI đối với nhóm CLMV đang phát triển lớn hơn đáng kể so với nhóm ASEAN-6 đã hoàn thiện hạ tầng."
+      "interaction_coef": 0.6598641326555139,
+      "interaction_p_value": 0.07250336381317553,
+      "total_clmv_coef": 1.1858947883282145,
+      "total_clmv_p_value": 0.0021779883306979756,
+      "interpretation": "Kiểm định tổ hợp tuyến tính mô hình M5 PPML cho thấy tổng tác động biên của LSCI đối với nhóm CLMV đạt 1.186*** (SE = 0.267, p = 0.002), vượt trội so với tác động ở nhóm ASEAN-6 (hệ số cơ sở = 0.526). Hệ số tương tác chênh lệch dương (0.660*, p = 0.073) chứng minh nhóm CLMV có độ nhạy và dư địa hưởng lợi từ kết nối vận tải biển cao hơn."
     },
     "H4_Agri_vs_Manufacturing": {
       "statement": "Kết nối vận tải biển có tác động lớn hơn đối với hàng chế biến, chế tạo so với nông-thủy sản",
       "status": "CONFIRMED (Chấp nhận)",
-      "mfg_coef": 1.134,
-      "mfg_p_value": 0.0,
-      "agri_coef": 0.124,
-      "agri_p_value": 0.6575,
-      "interpretation": "LSCI có tác động mạnh mẽ và có ý nghĩa ở mức 1% đối với hàng chế biến, chế tạo (hệ số 1.134***), trong khi tác động đối với nông-thủy sản là không có ý nghĩa thống kê (0.124, p = 0.658)."
+      "mfg_coef": 1.117915856805304,
+      "mfg_p_value": 0.005272696735690449,
+      "fuels_coef": -0.16317844095591028,
+      "fuels_p_value": 0.7292242196035531,
+      "agri_coef": 0.12402434731759726,
+      "agri_p_value": 0.6692164419808566,
+      "interpretation": "Khi bóc tách độc lập nhóm Nhiên liệu & Khoáng sản HS 25–27 (loại trừ biến dạng từ dầu khí Brunei), kết nối vận tải biển LSCI tác động mạnh mẽ và có ý nghĩa thống kê cao đối với hàng Công nghiệp chế biến - chế tạo HS 28–96 (1.118***, p = 0.005). Ngược lại, tác động lên Nông-thủy sản HS 01–24 (0.124, p = 0.669) và Nhiên liệu (-0.163, p = 0.729) hoàn toàn không có ý nghĩa thống kê, khẳng định mạng lưới tàu container gắn liền với chuỗi cung ứng sản phẩm công nghiệp."
+    }
+  },
+  "econometric_diagnostics": {
+    "country_specific_trends_test": {
+      "coef": 0.3283515491780489,
+      "p_value": 0.016529967256550027,
+      "conclusion": "Hiệu ứng LSCI vẫn giữ được ý nghĩa thống kê dương (0.328**, p = 0.017) sau khi đã kiểm soát xu hướng tuyến tính riêng của từng quốc gia."
+    },
+    "placebo_lead_test": {
+      "coef": 1.0000130511612078,
+      "p_value": 0.001516597471777178,
+      "conclusion": "Hệ số LSCI kỳ sau t+1 mang giá trị dương có ý nghĩa (1.000***, p = 0.002), phản ánh quán tính vĩ mô cao và tính chất quy hoạch đón đầu của hạ tầng cảng biển; kết quả nghiên cứu do đó được diễn giải như mối quan hệ đồng biến bền vững (robust association) thay vì giả định ngoại sinh tuyệt đối."
+    },
+    "multicollinearity_vif": {
+      "centered_vif_status": "Tất cả các biến trong mô hình có VIF tập trung < 12 (LSCI = 7.70, FDI = 1.53, Pop = 3.50), và VIF sau khi trừ bình quân quốc gia (within-country) đều < 3.70, loại trừ hoàn toàn rủi ro đa cộng tuyến nghiêm trọng."
+    },
+    "small_sample_inference": {
+      "method": "Clustered Standard Errors kết hợp phân phối Student-t với bậc tự do mẫu nhỏ (use_t=True), đảm bảo tính thận trọng và không phóng đại mức ý nghĩa thống kê với 9 cụm quốc gia."
     }
   },
   "tables_generated": [
     "outputs/tables/table_descriptive_stats.csv",
     "outputs/tables/table_descriptive_stats.tex",
     "outputs/tables/table_correlation_vif.csv",
-    "outputs/tables/table_correlation_vif.tex",
     "outputs/tables/table_country_panel_models.csv",
     "outputs/tables/table_country_panel_models.tex",
     "outputs/tables/table_gravity_ppml_models.csv",

@@ -1,0 +1,222 @@
+{
+  "R1_baseline": {
+    "id": "R1_baseline",
+    "name": "1. Mẫu cơ sở (2010–2024)",
+    "desc": "Toàn bộ 9 nước ASEAN ven biển",
+    "key_var": "ln_lsci",
+    "n_obs": 135,
+    "n_clusters": 9,
+    "pseudo_ll": -68300421763.734116,
+    "estimates": {
+      "coef": 1.0386846215193017,
+      "se": 0.2769666077854941,
+      "tval": 3.750216063315998,
+      "pval": 0.005622491852573317
+    },
+    "gdp_estimates": {
+      "coef": 0.5538053545540613,
+      "se": 0.2870757735585532,
+      "pval": 0.08984174639112376
+    }
+  },
+  "R2_country_trends": {
+    "id": "R2_country_trends",
+    "name": "2. Xu hướng thời gian từng nước",
+    "desc": "Kiểm soát xu hướng tuyến tính riêng của từng nước",
+    "key_var": "ln_lsci",
+    "n_obs": 135,
+    "n_clusters": 9,
+    "pseudo_ll": -32140492853.24913,
+    "estimates": {
+      "coef": 0.3283515491780489,
+      "se": 0.10868349959351567,
+      "tval": 3.0211720307692334,
+      "pval": 0.016529967256550027
+    },
+    "gdp_estimates": {
+      "coef": 0.9125029323218161,
+      "se": 0.3851528185346762,
+      "pval": 0.0453031599630067
+    }
+  },
+  "R3_no_sgp": {
+    "id": "R3_no_sgp",
+    "name": "3. Loại Singapore (Không ngoại lai)",
+    "desc": "Loại trừ cảng trung chuyển lớn nhất",
+    "key_var": "ln_lsci",
+    "n_obs": 120,
+    "n_clusters": 8,
+    "pseudo_ll": -38000897371.51143,
+    "estimates": {
+      "coef": 0.4722884421824869,
+      "se": 0.07876370043647157,
+      "tval": 5.996270357604903,
+      "pval": 0.0005442793643041704
+    },
+    "gdp_estimates": {
+      "coef": 1.13165766809308,
+      "se": 0.17795048046322423,
+      "pval": 0.0003817822873264912
+    }
+  },
+  "R4_pre_covid": {
+    "id": "R4_pre_covid",
+    "name": "4. Tiền COVID (2010–2019)",
+    "desc": "Tránh cú sốc đại dịch toàn cầu",
+    "key_var": "ln_lsci",
+    "n_obs": 90,
+    "n_clusters": 9,
+    "pseudo_ll": -24613016372.03897,
+    "estimates": {
+      "coef": 0.9528881747147722,
+      "se": 0.2577407210561862,
+      "tval": 3.6970804256695136,
+      "pval": 0.006068042597368193
+    },
+    "gdp_estimates": {
+      "coef": 1.230347713354064,
+      "se": 0.4467696141755566,
+      "pval": 0.024909336736101934
+    }
+  },
+  "R5_no_covid_years": {
+    "id": "R5_no_covid_years",
+    "name": "5. Loại năm 2020–2021",
+    "desc": "Loại trừ đứt gãy chuỗi cung ứng",
+    "key_var": "ln_lsci",
+    "n_obs": 117,
+    "n_clusters": 9,
+    "pseudo_ll": -61429128500.933365,
+    "estimates": {
+      "coef": 1.0831996002783932,
+      "se": 0.2833839773580342,
+      "tval": 3.8223741877609845,
+      "pval": 0.005072575921668724
+    },
+    "gdp_estimates": {
+      "coef": 0.5037869755327959,
+      "se": 0.2944221780184643,
+      "pval": 0.12542582546042022
+    }
+  },
+  "R6_asean6": {
+    "id": "R6_asean6",
+    "name": "6. Phân nhóm ASEAN-6",
+    "desc": "Các nền kinh tế phát triển hơn",
+    "key_var": "ln_lsci",
+    "n_obs": 90,
+    "n_clusters": 6,
+    "pseudo_ll": -27084926410.69243,
+    "estimates": {
+      "coef": 0.30913619045619356,
+      "se": 0.3034761451857947,
+      "tval": 1.018650708993729,
+      "pval": 0.3550993528374576
+    },
+    "gdp_estimates": {
+      "coef": 0.08524167395968263,
+      "se": 0.2530982602369777,
+      "pval": 0.7499493597282696
+    }
+  },
+  "R7_clmv": {
+    "id": "R7_clmv",
+    "name": "7. Phân nhóm CLMV có biển",
+    "desc": "Campuchia, Myanmar, Việt Nam (3 nước)",
+    "key_var": "ln_lsci",
+    "n_obs": 45,
+    "n_clusters": 3,
+    "pseudo_ll": -1482142399.4278564,
+    "estimates": {
+      "coef": 0.13118704064192294,
+      "se": 0.027199378019519563,
+      "tval": 4.823163255710366,
+      "pval": 0.04039980353997424
+    },
+    "gdp_estimates": {
+      "coef": 0.6883941980624497,
+      "se": 0.14458657959952378,
+      "pval": 0.04139465953373039
+    }
+  },
+  "R8_manufacturing": {
+    "id": "R8_manufacturing",
+    "name": "8. Chế biến – Chế tạo (HS 28–96)",
+    "desc": "Kiểm định H4 (Đã bóc tách nhiên liệu khoáng sản)",
+    "key_var": "ln_lsci",
+    "n_obs": 135,
+    "n_clusters": 9,
+    "pseudo_ll": -70298032673.69595,
+    "estimates": {
+      "coef": 1.117915856805304,
+      "se": 0.2945614692472932,
+      "tval": 3.7951869932682203,
+      "pval": 0.005272696735690449
+    },
+    "gdp_estimates": {
+      "coef": 0.5948221555551569,
+      "se": 0.3060702234576161,
+      "pval": 0.08788129833789558
+    }
+  },
+  "R9_fuels": {
+    "id": "R9_fuels",
+    "name": "9. Nhiên liệu & Khoáng sản (HS 25–27)",
+    "desc": "Kiểm định H4 (Hàng rời/dầu mỏ, kiểm chứng Brunei)",
+    "key_var": "ln_lsci",
+    "n_obs": 135,
+    "n_clusters": 9,
+    "pseudo_ll": -16093301499.726486,
+    "estimates": {
+      "coef": -0.16317844095591028,
+      "se": 0.4551325277649359,
+      "tval": -0.35852950734426015,
+      "pval": 0.7292242196035531
+    },
+    "gdp_estimates": {
+      "coef": -0.10012173405450797,
+      "se": 0.28490219580476994,
+      "pval": 0.7343457251648022
+    }
+  },
+  "R10_agriculture": {
+    "id": "R10_agriculture",
+    "name": "10. Nông – Thủy sản (HS 01–24)",
+    "desc": "Kiểm định H4 (Hàng nông nghiệp truyền thống)",
+    "key_var": "ln_lsci",
+    "n_obs": 135,
+    "n_clusters": 9,
+    "pseudo_ll": -10897482548.579805,
+    "estimates": {
+      "coef": 0.12402434731759726,
+      "se": 0.2797063011794094,
+      "tval": 0.4434092002741314,
+      "pval": 0.6692164419808566
+    },
+    "gdp_estimates": {
+      "coef": 0.5481097828158514,
+      "se": 0.2518168824765485,
+      "pval": 0.061183918985109706
+    }
+  },
+  "R11_placebo": {
+    "id": "R11_placebo",
+    "name": "11. Placebo Test (LSCI Lead 1)",
+    "desc": "LSCI năm t+1 (Kiểm tra kỳ vọng & tự tương quan)",
+    "key_var": "ln_lsci_lead1",
+    "n_obs": 126,
+    "n_clusters": 9,
+    "pseudo_ll": -54728501324.145706,
+    "estimates": {
+      "coef": 1.0000130511612078,
+      "se": 0.21220035090968217,
+      "tval": 4.712589054986241,
+      "pval": 0.001516597471777178
+    },
+    "gdp_estimates": {
+      "coef": 0.689818177978748,
+      "se": 0.23953587488685282,
+      "pval": 0.020517472626677385
+    }
+  }
+}

@@ -1,27 +1,31 @@
 \begin{table}
-\caption{Kết quả ước lượng mô hình trọng lực PPML song phương (2010--2024)}
+\caption{Kết quả ước lượng mô hình Trọng lực PPML song phương (2010--2024)}
 \label{tab:gravity_ppml}
-\begin{tabular}{llllll}
+\begin{tabular}{lllllll}
 \toprule
- & G1: Trọng lực cơ sở
-[Cặp FE + Năm FE] & G2: Trọng lực cổ điển
-[Nước FE + Năm FE] & G3: Sức cản xuất khẩu
-[Xuất khẩu-Năm FE] & G4: Sức cản nhập khẩu
-[Nhập khẩu-Năm FE] & G5: Mô hình rút gọn
+ & G1: Cấu trúc đầy đủ
+[Cặp, XK-Năm, NK-Năm] & G2: Trọng lực chuẩn
+[Cặp FE + Năm FE] & G3: Sức cản xuất khẩu
+[XK-Năm FE + NK FE] & G4: Sức cản nhập khẩu
+[XK FE + NK-Năm FE] & G5: Trọng lực cổ điển
+[Nước FE + Năm FE] & G6: Mô hình rút gọn
 [LSBCI + LSCI] \\
 \midrule
-ln(LSBCI song phương) & 0.580** & 0.574 & 0.569 & 0.466 & 0.118 \\
-ln(LSBCI song phương) (SE) & (0.226) & (0.353) & (0.479) & (0.411) & (0.142) \\
-ln(LSCI nước xuất khẩu) &  &  &  &  & 0.757*** \\
-ln(LSCI nước xuất khẩu) (SE) &  &  &  &  & (0.259) \\
-Hiệu ứng cố định Cặp quốc gia & Có & Không & Không & Không & Có \\
-Hiệu ứng cố định Năm & Có & Có & Hấp thụ & Hấp thụ & Có \\
-Hiệu ứng Xuất khẩu - Năm & Không & Không & Có & Không & Không \\
-Hiệu ứng Nhập khẩu - Năm & Không & Không & Không & Có & Không \\
-Số quan sát (N) & 3105 & 3105 & 3105 & 3105 & 3105 \\
-Số cặp quốc gia & 207 & 207 & 207 & 207 & 207 \\
-Số quan sát thương mại bằng 0 & 165 & 165 & 165 & 165 & 165 \\
-Sai số chuẩn phân cụm & Cluster (Pair ID) & Cluster (Pair ID) & Cluster (Pair ID) & Cluster (Pair ID) & Cluster (Pair ID) \\
+ln(LSBCI song phương) & -0.195 & 0.770*** & 0.569 & 0.604 & 0.692* & 0.062 \\
+ln(LSBCI song phương) (SE) & (0.242) & (0.265) & (0.479) & (0.428) & (0.369) & (0.157) \\
+ln(LSCI nước xuất khẩu) &  &  &  &  &  & 1.195*** \\
+ln(LSCI nước xuất khẩu) (SE) &  &  &  &  &  & (0.316) \\
+Hiệu ứng cố định Cặp quốc gia & Có & Có & Không & Không & Không & Có \\
+Hiệu ứng cố định Năm & Hấp thụ & Có & Hấp thụ & Hấp thụ & Có & Có \\
+Hiệu ứng Xuất khẩu - Năm & Có & Không & Có & Không & Không & Không \\
+Hiệu ứng Nhập khẩu - Năm & Có & Không & Không & Có & Không & Không \\
+Hiệu ứng Nước xuất khẩu & Hấp thụ & Hấp thụ & Hấp thụ & Có & Có & Hấp thụ \\
+Hiệu ứng Nước nhập khẩu & Hấp thụ & Hấp thụ & Có & Hấp thụ & Có & Hấp thụ \\
+Số quan sát (N) & 3082 & 3082 & 3082 & 3082 & 3082 & 3082 \\
+Số cặp quốc gia & 207 & 207 & 207 & 207 & 207 & 207 \\
+Số quan sát thương mại bằng 0 & 142 & 142 & 142 & 142 & 142 & 142 \\
+Sai số chuẩn phân cụm & Cluster (pair_id, t-dist) & Cluster (pair_id, t-dist) & Cluster (pair_id, t-dist) & Cluster (pair_id, t-dist) & Cluster (pair_id, t-dist) & Cluster (pair_id, t-dist) \\
+Pseudo Log-likelihood & -189856.1 & -500867.6 & -2187370.4 & -2198029.3 & -2362496.0 & -426690.2 \\
 \bottomrule
 \end{tabular}
 \end{table}

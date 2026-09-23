@@ -1,5 +1,5 @@
-,ln_lsci,ln_gdp,ln_population,fdi_gdp,VIF
-ln_lsci,1.0,0.874,0.423,0.295,32.74
-ln_gdp,0.874,1.0,0.719,0.032,250.88
-ln_population,0.423,0.719,1.0,-0.325,218.35
-fdi_gdp,0.295,0.032,-0.325,1.0,2.47
+,ln_lsci,ln_gdp,ln_population,fdi_gdp,VIF (Centered),Within-Country VIF
+ln_lsci,1.0,0.874,0.423,0.295,7.7,1.92
+ln_gdp,0.874,1.0,0.719,0.032,11.66,3.69
+ln_population,0.423,0.719,1.0,-0.325,3.5,2.52
+fdi_gdp,0.295,0.032,-0.325,1.0,1.53,1.08

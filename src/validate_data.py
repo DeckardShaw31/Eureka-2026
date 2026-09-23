@@ -45,12 +45,26 @@ def validate_datasets():
     assert len(dup_bilateral) == 0, f"Phát hiện {len(dup_bilateral)} dòng trùng khóa song phương!"
     print("  ✓ Khóa (exporter_iso3, importer_iso3, year, product_group) duy nhất tuyệt đối 100%.")
     
-    # 2. Miền giá trị
-    assert (df_bilateral['trade_usd'] >= 0).all(), "Giá trị trade_usd có số âm!"
+    # 2. Miền giá trị và kiểm toán số 0 giả
+    valid_trade = df_bilateral['trade_usd'].dropna()
+    assert (valid_trade >= 0).all(), "Giá trị trade_usd có số âm!"
     valid_lsbci = df_bilateral['lsbci'].dropna()
     assert (valid_lsbci >= 0).all(), "LSBCI có giá trị âm!"
     assert df_bilateral['year'].between(2010, 2024).all(), "Năm song phương ngoài khoảng 2010-2024!"
-    print("  ✓ Miền giá trị song phương hợp lệ (trade_usd >= 0, lsbci >= 0).")
+    
+    # Kiểm tra Việt Nam 2024 không bị gán số 0 giả
+    vnm_2024 = df_bilateral[(df_bilateral['exporter_iso3'] == 'VNM') & (df_bilateral['year'] == 2024)]
+    assert len(vnm_2024) == 24, "Việt Nam 2024 phải có đúng 24 cặp đối tác!"
+    assert vnm_2024['trade_usd'].isnull().all(), "Việt Nam 2024 phải có trade_usd là NaN (không được điền số 0 giả)!"
+    assert (vnm_2024['reporter_year_complete'] == 0).all(), "Cờ reporter_year_complete của Việt Nam 2024 phải bằng 0!"
+    print("  ✓ Đã kiểm tra điểm khuyết Việt Nam 2024: 24 cặp được bảo toàn NaN, không có số 0 giả.")
+    
+    # Kiểm tra không có quốc gia nào đã báo cáo mà tổng xuất khẩu song phương = 0 trong khi xuất khẩu tổng > 0
+    reported_pairs = df_bilateral[df_bilateral['reporter_year_complete'] == 1]
+    agg_reported = reported_pairs.groupby(['exporter_iso3', 'year'])['trade_usd'].sum()
+    assert (agg_reported > 0).all(), "Có reporter-year đã báo cáo nhưng tổng kim ngạch song phương lại bằng 0!"
+    print("  ✓ Kiểm toán reporter-year: Tất cả các năm có báo cáo đều có kim ngạch dương.")
+
     
     print("\n=== [VALIDATION 3] Xuất các báo cáo chẩn đoán dữ liệu ===")
     # A. Báo cáo tỷ lệ khuyết (Missingness report)

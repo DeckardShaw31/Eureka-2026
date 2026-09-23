@@ -39,7 +39,7 @@ def build_country_panel(start_year=2010, end_year=2025):
     as_file = os.path.join(INTERIM_DIR, 'aseanstats_exports_annual.csv')
     df_as = pd.read_csv(as_file)
     panel = panel.merge(
-        df_as[['iso3', 'year', 'export_usd', 'export_usd_agri', 'export_usd_mfg']],
+        df_as[['iso3', 'year', 'export_usd', 'export_usd_agri', 'export_usd_fuels', 'export_usd_mfg', 'export_usd_non_agri']],
         on=['iso3', 'year'],
         how='left'
     )
@@ -68,7 +68,9 @@ def build_country_panel(start_year=2010, end_year=2025):
     # Tính log cho các biến dương
     panel['ln_export'] = np.where(panel['export_usd'] > 0, np.log(panel['export_usd']), np.nan)
     panel['ln_export_agri'] = np.where(panel['export_usd_agri'] > 0, np.log(panel['export_usd_agri']), np.nan)
+    panel['ln_export_fuels'] = np.where(panel['export_usd_fuels'] > 0, np.log(panel['export_usd_fuels']), np.nan)
     panel['ln_export_mfg'] = np.where(panel['export_usd_mfg'] > 0, np.log(panel['export_usd_mfg']), np.nan)
+    panel['ln_export_non_agri'] = np.where(panel['export_usd_non_agri'] > 0, np.log(panel['export_usd_non_agri']), np.nan)
     panel['ln_lsci'] = np.where(panel['lsci'] > 0, np.log(panel['lsci']), np.nan)
     panel['ln_gdp'] = np.where(panel['gdp_usd'] > 0, np.log(panel['gdp_usd']), np.nan)
     panel['ln_population'] = np.where(panel['population'] > 0, np.log(panel['population']), np.nan)
@@ -79,7 +81,6 @@ def build_country_panel(start_year=2010, end_year=2025):
     
     # Biến tốc độ thay đổi tỷ giá chính thức (% change)
     panel['fx_growth'] = panel.groupby('iso3')['official_fx'].pct_change(fill_method=None)
-
     
     # Xác định cờ data_complete (đầy đủ các biến bắt buộc cho mô hình cơ sở M1 & M2)
     core_complete = (
@@ -95,10 +96,12 @@ def build_country_panel(start_year=2010, end_year=2025):
         'iso3', 'country', 'year', 'export_usd', 'lsci', 'gdp_usd', 'population',
         'fdi_gdp', 'reer', 'official_fx', 'clmv', 'asean6', 'covid',
         'ln_export', 'ln_lsci', 'ln_gdp', 'ln_population', 'ln_lsci_lag1',
-        'data_complete', 'export_usd_agri', 'export_usd_mfg', 'ln_export_agri',
-        'ln_export_mfg', 'lsci_lag1', 'fx_growth', 'lsci_quarters', 'lsci_partial_year'
+        'data_complete', 'export_usd_agri', 'export_usd_fuels', 'export_usd_mfg', 'export_usd_non_agri',
+        'ln_export_agri', 'ln_export_fuels', 'ln_export_mfg', 'ln_export_non_agri',
+        'lsci_lag1', 'fx_growth', 'lsci_quarters', 'lsci_partial_year'
     ]
     panel = panel[ordered_cols]
+
     
     out_file = os.path.join(PROCESSED_DIR, 'panel_country_year.csv')
     panel.to_csv(out_file, index=False)

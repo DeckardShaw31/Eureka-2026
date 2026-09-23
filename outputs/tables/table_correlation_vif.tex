@@ -1,14 +1,14 @@
 \begin{table}
-\caption{Ma trận tương quan và hệ số phóng đại phương sai (VIF)}
+\caption{Ma trận tương quan và hệ số phóng đại phương sai chuẩn và nội bộ quốc gia (VIF)}
 \label{tab:corr_vif}
-\begin{tabular}{lrrrrr}
+\begin{tabular}{lrrrrrr}
 \toprule
- & ln_lsci & ln_gdp & ln_population & fdi_gdp & VIF \\
+ & ln_lsci & ln_gdp & ln_population & fdi_gdp & VIF (Centered) & Within-Country VIF \\
 \midrule
-ln_lsci & 1.000000 & 0.874000 & 0.423000 & 0.295000 & 32.740000 \\
-ln_gdp & 0.874000 & 1.000000 & 0.719000 & 0.032000 & 250.880000 \\
-ln_population & 0.423000 & 0.719000 & 1.000000 & -0.325000 & 218.350000 \\
-fdi_gdp & 0.295000 & 0.032000 & -0.325000 & 1.000000 & 2.470000 \\
+ln_lsci & 1.000000 & 0.874000 & 0.423000 & 0.295000 & 7.700000 & 1.920000 \\
+ln_gdp & 0.874000 & 1.000000 & 0.719000 & 0.032000 & 11.660000 & 3.690000 \\
+ln_population & 0.423000 & 0.719000 & 1.000000 & -0.325000 & 3.500000 & 2.520000 \\
+fdi_gdp & 0.295000 & 0.032000 & -0.325000 & 1.000000 & 1.530000 & 1.080000 \\
 \bottomrule
 \end{tabular}
 \end{table}

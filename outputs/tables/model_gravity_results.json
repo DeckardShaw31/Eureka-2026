@@ -1,0 +1,103 @@
+{
+  "G1": {
+    "model_id": "G1",
+    "name": "G1: Cấu trúc đầy đủ [Cặp, XK-Năm, NK-Năm]",
+    "n_obs": 3082,
+    "n_pairs": 207,
+    "zero_obs": 142,
+    "converged": true,
+    "pseudo_ll": -189856.09656070833,
+    "ln_lsbci": {
+      "coef": -0.19528155776673062,
+      "se": 0.24247484049241552,
+      "tval": -0.8053683317005375,
+      "pval": 0.4215357739177009
+    },
+    "ln_exporter_lsci": null
+  },
+  "G2": {
+    "model_id": "G2",
+    "name": "G2: Trọng lực chuẩn [Cặp FE + Năm FE]",
+    "n_obs": 3082,
+    "n_pairs": 207,
+    "zero_obs": 142,
+    "converged": true,
+    "pseudo_ll": -500867.55204164947,
+    "ln_lsbci": {
+      "coef": 0.7697816384714602,
+      "se": 0.2647185191742582,
+      "tval": 2.9079251458215145,
+      "pval": 0.004037083360617968
+    },
+    "ln_exporter_lsci": null
+  },
+  "G3": {
+    "model_id": "G3",
+    "name": "G3: Sức cản xuất khẩu [XK-Năm FE + NK FE]",
+    "n_obs": 3082,
+    "n_pairs": 207,
+    "zero_obs": 142,
+    "converged": true,
+    "pseudo_ll": -2187370.423962554,
+    "ln_lsbci": {
+      "coef": 0.5690296883527183,
+      "se": 0.4787932816050408,
+      "tval": 1.1884663177502854,
+      "pval": 0.23601804004866336
+    },
+    "ln_exporter_lsci": null
+  },
+  "G4": {
+    "model_id": "G4",
+    "name": "G4: Sức cản nhập khẩu [XK FE + NK-Năm FE]",
+    "n_obs": 3082,
+    "n_pairs": 207,
+    "zero_obs": 142,
+    "converged": true,
+    "pseudo_ll": -2198029.292145592,
+    "ln_lsbci": {
+      "coef": 0.6044313220396832,
+      "se": 0.42808315269045283,
+      "tval": 1.4119483989054524,
+      "pval": 0.15947391535200797
+    },
+    "ln_exporter_lsci": null
+  },
+  "G5": {
+    "model_id": "G5",
+    "name": "G5: Trọng lực cổ điển [Nước FE + Năm FE]",
+    "n_obs": 3082,
+    "n_pairs": 207,
+    "zero_obs": 142,
+    "converged": true,
+    "pseudo_ll": -2362495.994294569,
+    "ln_lsbci": {
+      "coef": 0.6921129951263978,
+      "se": 0.36863056916681036,
+      "tval": 1.8775246900731317,
+      "pval": 0.06185944196931532
+    },
+    "ln_exporter_lsci": null
+  },
+  "G6": {
+    "model_id": "G6",
+    "name": "G6: Mô hình rút gọn [LSBCI + LSCI]",
+    "n_obs": 3082,
+    "n_pairs": 207,
+    "zero_obs": 142,
+    "converged": true,
+    "pseudo_ll": -426690.1973675226,
+    "ln_lsbci": {
+      "coef": 0.06203377721671055,
+      "se": 0.15705659541314385,
+      "tval": 0.39497721858498297,
+      "pval": 0.6932683664238295
+    },
+    "ln_exporter_lsci": {
+      "coef": 1.1952305719279668,
+      "se": 0.31633789803931867,
+      "tval": 3.7783350630325288,
+      "pval": 0.00020665204070113196
+    }
+  }
+}

@@ -2,7 +2,12 @@ variable,non_null_count,missing_count,zero_count,completeness_pct
 exporter_iso3,3240,0,0,100.0
 importer_iso3,3240,0,0,100.0
 year,3240,0,0,100.0
-trade_usd,3240,0,168,100.0
+trade_usd,3216,24,144,99.26
+trade_usd_raw,3072,168,0,94.81
+trade_observed,3240,0,168,100.0
+zero_trade_confirmed,3240,0,3096,100.0
+reporter_year_complete,3240,0,24,100.0
+missing_reason,24,3216,0,0.74
 lsbci,3105,135,0,95.83
 product_group,3240,0,0,100.0
 pair_id,3240,0,0,100.0
